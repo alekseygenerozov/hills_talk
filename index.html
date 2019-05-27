@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style type="text/css">
+        p { text-align: left; 
+        } 
+        .reveal section img { background:none; border:none; box-shadow:none; }
+        .reveal li {text-align: left; font-size: 55px;}
+        .reveal table {frame: box; font-size: 60px;}
+        .reveal ul {  display: block; text-align: left; margin: 0 0 0 1em;}
+        .reveal h4 {text-align: left;}
+        .reveal h3 {text-align: left;}
+        .reveal h2 {text-align: left;}
+        .reveal h1 {text-align: left;}
+        .reveal div {padding: 10px;}
+        .reveal table { border-collapse: collapse; }
+        .reveal td, th {border: 5px solid white;}
+
+        /*.reveal .slides > section > section { text-align:left; }*/
+/*        .reveal .center {text-align: left;}*/
+        .reveal .lcred {
+    	text-align: left;
+    	font-size: 55% !important;
+		}
+		.figb figcaption {position: absolute; bottom: -50px; text-align: left; font-size: 70%;}
+		.figl figcaption {position: absolute; right: 10%; top:150px ; text-align: left; font-size: 60%;}
+		
+
+		.container{
+	    display: flex;
+	   	margin: 100px;
+
+		}
+		.col{
+	    flex: 1;
+		}
+
+    </style> 
+	</head>
+	<body>
+		<div class="reveal">
+		    <!-- In between the <div="reveal"> and the <div class="slides">-->
+			<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
+<!-- 			<header style="position: absolute; left: 10px;"></header> -->
+<!-- 			<header class="right" style="position: absolute; right: 10px;"></header> -->
+			<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
+			<div class="slides">
+				<section>
+					<h1>Eccentricity and the Hills Mechanism</h1>
+					<h3>Aleksey Generozov, Ann-Marie Madigan</h3>
+					<h3>CU Boulder</h3>
+				</section>
+
+				<section>
+					<video width="1400" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
+				</section>
+
+
+				<section>
+				<img src="figures/UCLA.png" width="1000" align="left">	
+				<div class="container">
+				<div class="col">
+				</div>
+					<ul>
+						<li>Application: Galactic Center S-Stars
+					</ul>		
+				</div>
+				</section>
+
+				<section>
+					<h2>Larger initial eccentricity of binary increases</h2>
+					<ul>
+						<li class=fragment>Collision probability => Interesting transients  (G2?)
+						<li class=fragment>Ratio of retrograde to prograde disruption
+						<li class=fragment>Mean semi-major axis (sma) of bound stars
+					</ul>
+				</section>
+
+				<section>
+					<h2>Prograde vs. Retrograde</h2>
+
+				</section>
+				
+				<section>
+					<h2>Monte Carlo Trials (Tailored to the Galactic Center)</h2>
+					<section>	
+						<img src="figures/sma_range.png" width="1100" align="left">	
+						<div class="container">
+						<div class="col">
+							<ul>
+								<li>Binaries in the clockwise disk
+								<li>Require binaries don't evaporate or merge after 4 Myr
+								<li>Evolution is dominated by the disk stars
+							</ul>
+						</div>
+						</div>
+					</section>
+
+					<section>
+						<img src="figures/params.png" width="100%" align="left">	
+					</section>
+
+					<section>
+							<h3>Method:</h3>
+							<ul>
+								<li class=fragment> Hill’s approximation (see Sari et al 2010). 
+								<li class=fragment> Validated against direct 3-body integrations (Archain).
+								<li class=fragment> Approximate initial binary COM orbit as parabolic.
+							</ul>
+					</section>
+				</section>
+
+				<section>
+				<img src="figures/hist_es.svg" width="1300" align="left">	
+				<div class="container">
+				<div class="col">
+						<ul>
+							<li>Disrupted binaries: S-star eccentricity distribution
+						</ul>
+				</div>
+				</div>
+				</section>
+
+				<section>
+				<img src="figures/hist_as.svg" width="1300" align="left">	
+				<div class="container">
+				<div class="col">
+						<ul>
+							<li>Disrupted binaries: S-star semi-major axis distribution
+						</ul>
+				</div>
+				</div>
+				</section>
+
+
+				<section>
+				<img src="figures/s2d_hist_thermal.svg" width="1300" align="left">	
+				<div class="container">
+				<div class="col">
+						<ul>
+							<li>Disrupted binaries: S-star distribution
+						</ul>
+				</div>
+				</div>
+				</section>
+
+
+				<section>
+				<img src="figures/s2d_hist_0.svg" width="1300" align="left">	
+				<div class="container">
+				<div class="col">
+						<ul>
+							<li>Disrupted binaries: S-star distribution
+						</ul>
+				</div>
+				</div>
+				</section>
+
+				<section>
+					<table width="100%" style="border: 5px solid white">
+  					<thead>
+  					<tr>
+					    <td><font color=cyan><b>Binary Eccentricity</b></font></td>
+					    <td><font color=cyan><b>Retrograde/Prograde</b></font></td>
+					    <td><font color=cyan><b>Collisions (%)</b></font></td>
+
+				  	</tr>
+				  	</thead>
+				  	<tr>
+					    <td data-th="Binary Eccentricity ">0</td>
+					    <td data-th="Retrograde/Prograde">0.09</td>
+					    <td data-th="Collisions (%)">1.6</td>
+				  	</tr>
+				  	<tr>
+					    <td data-th="Binary Eccentricity ">Uniform</td>
+					    <td data-th="Retrograde/Prograde">0.14</td>
+					    <td data-th="Collisions (%)">5.5</td>
+				  	</tr>
+				  	<tr>
+					    <td data-th="Binary Eccentricity ">Thermal</td>
+					    <td data-th="Retrograde/Prograde">0.17</td>
+					    <td data-th="Collisions (%)">8.2</td>
+				  	</tr>
+					</table>
+				</section>
+
+				<section>
+				<img src="figures/trr.svg" width="1300" align="left">	
+				<div class="container">
+				<div class="col">
+						<ul>
+							<li>Galactic Center: Resonant relaxation time
+						</ul>
+				</div>
+				</div>
+				</section>
+
+				<section>
+					<h2>Conclusions</h2>
+					<ul>
+						<li class=fragment> Non-zero initial binary eccentricity: stars are deposited at larger semi-major axes. 
+						<li class=fragment> Enhances collision probability.
+						<li class=fragment> Not enough time for S-stars to relax via resonant relaxation.
+					</ul>
+				</section>
+
+
+
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				width: 1920,
+				height: 1080,
+				// Factor of the display size that should remain empty around the content
+				margin: 0.03,
+				// Bounds for smallest/largest possible scale to apply to content
+				minScale: 0.2,
+				maxScale: 1.5,
+				history: true,
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full'
+				},
+				dependencies: [
+				    { src: 'plugin/math/math.js', async: true },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					// { src: 'plugin/math/math.js', async: true }
+
+				]
+			});
+		</script>
+		<!-- <script src="pdfjs/src/pdf.js"></script> -->
+	</body>
+</html>
