@@ -34,7 +34,7 @@
         .reveal h1 {text-align: left;}
         .reveal div {padding: 10px;}
         .reveal table { border-collapse: collapse; }
-        .reveal td, th {border: 5px solid white;}
+        .reveal td, th {border: 5px solid white !important;}
 
         /*.reveal .slides > section > section { text-align:left; }*/
 /*        .reveal .center {text-align: left;}*/
@@ -44,8 +44,7 @@
 		}
 		.figb figcaption {position: absolute; bottom: -50px; text-align: left; font-size: 70%;}
 		.figl figcaption {position: absolute; right: 10%; top:150px ; text-align: left; font-size: 60%;}
-		
-
+		.hh {font-weight:bold !important; color: cyan; font-style: italic !important;}
 		.container{
 	    display: flex;
 	   	margin: 100px;
@@ -72,7 +71,9 @@
 				</section>
 
 				<section>
-					<video width="1400" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
+					<div style="text-align:left">
+						<video align="left" width="1400" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
+					</div>
 				</section>
 
 
@@ -98,6 +99,7 @@
 
 				<section>
 					<h2>Prograde vs. Retrograde</h2>
+					<img src="disrupt_prob.svg" width="1300" align="left">
 
 				</section>
 				
@@ -177,12 +179,12 @@
 				</section>
 
 				<section>
-					<table width="100%" style="border: 5px solid white">
+					<table width="100%">
   					<thead>
   					<tr>
-					    <td><font color=cyan><b>Binary Eccentricity</b></font></td>
-					    <td><font color=cyan><b>Retrograde/Prograde</b></font></td>
-					    <td><font color=cyan><b>Collisions (%)</b></font></td>
+					    <td class="hh"><b>Binary Eccentricity</b></td>
+					    <td class="hh">Retrograde/Prograde</td>
+					    <td class="hh">Collisions (%)</td>
 
 				  	</tr>
 				  	</thead>
