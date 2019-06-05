@@ -53,6 +53,27 @@
 		.col{
 	    flex: 1;
 		}
+/*		.video-wrapper {
+ 		 position: relative;
+  		 height: 100%;
+  		 padding-top: 25px;
+  		 width: 100;
+  		 margin: 100;
+		}*/
+
+		.video {float: left;}
+
+		.column {
+	  	width: 50%
+	  	height: 100%;
+	  	clear: bottom;
+	    }
+
+		.row:{
+  		content: "";
+  		display: table;
+  		clear: both;
+		}
 
     </style> 
 	</head>
@@ -65,7 +86,7 @@
 			<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
 			<div class="slides">
 				<section>
-					<h1>Hills Mechanism and the S-stars</h1>
+					<h1>Hills Mechanism and the Galactic Center</h1>
 					<h3>Aleksey Generozov, Ann-Marie Madigan</h3>
 					<h3>CU Boulder</h3>
 				</section>
@@ -73,32 +94,76 @@
 				<!--Possibly should include Fig 2 from Brown's review-->
 				<section>
 					<div style="text-align:left">
-						<video align="left" width="1400" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
+						<video align="left" width="1300" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
 					</div>
 				</section>
 
-
 				<section>
-				<img src="figures/UCLA.png" width="1000" align="left">	
-				<div class="container">
-				<div class="col">
-				</div>
-					<ul>
-						<li>Application: Galactic Center S-Stars
-						<li class=fragment>Perets+2007: Binaries scattered from 
-							large distances by molecular clouds.
-						<li class=fragment>Madigan+2009*: Binary disruptions
-						from instability in an eccentric disk. 
-					</ul>		
-				</div>
+							<div style="width=1200; height=100%; float: left;">
+								<video width=1200 muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
+							</div>
+							<div class="container">
+							<div class="col">
+							<ul>
+								<li>Application: Galactic Center S-Stars
+								<li class=fragment>Perets+2007: Binaries scattered from 
+									large distances by molecular clouds.
+								<li class=fragment>Madigan+2009*: Binary disruptions
+								from instability in an eccentric disk. 
+							</ul>	
+							</div>
+							</div>
+							<aside class="notes">
+							Mention isotropic star cluster.
+							</aside>
+
 				</section>
 
+<!-- 				<section>
+						<div class=videowrapper>
+							<video width="1200" muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
+						</div>
+
+						<div class="container">
+						<div class="col">
+						<ul>
+							<li>Application: Galactic Center S-Stars
+							<li class=fragment>Perets+2007: Binaries scattered from 
+								large distances by molecular clouds.
+							<li class=fragment>Madigan+2009*: Binary disruptions
+							from instability in an eccentric disk. 
+						</ul>		
+						</div>
+					    </div>
+
+				</section>
+ -->
+<!-- 
+				<section>
+						<div class="container">
+						<div class="col">
+							<video width="1200" muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
+						</div>
+						</div>
+						<div class="container">
+						<div class="col">
+						</div>
+							<ul>
+								<li>Application: Galactic Center S-Stars
+								<li class=fragment>Perets+2007: Binaries scattered from 
+									large distances by molecular clouds.
+								<li class=fragment>Madigan+2009*: Binary disruptions
+								from instability in an eccentric disk. 
+							</ul>		
+						</div>
+				</section>
+ -->
 				<section>
 					<h2>This work: Revisiting Hills mechanism as the origin of the S-stars</h2>
 					<ul>
-						<li class=fragment>Population of binaries in the Galactic Center.
-						<li class=fragment>Effects of varying the initial binary eccentricity. 
-						<li class=fragment>Can S-stars relax to the observed thermal distribution.
+						<li class=fragment>Population of binaries in the Galactic Center disk.
+						<li class=fragment>Monte-Carlo trials of disruptions.
+						<li class=fragment>Can S-stars relax to the observed eccentricity distribution?
 					</ul>
 				</section>
 
@@ -115,36 +180,68 @@
 
 				</section> -->
 				
-				<section>
-					<h2>Monte Carlo Trials (Tailored to the Galactic Center)</h2>
 					<section>	
+						<h2>Population of binaries</h2>
 						<img src="figures/sma_range.png" width="1100" align="left">	
 						<div class="container">
 						<div class="col">
 							<ul>
-								<li>Binaries in the clockwise disk
+								<li>Binaries in the disk
 								<li>Require binaries don't evaporate or merge after 4 Myr
 								<li>Evolution is dominated by the disk stars
+								<ul>
+									<li class=fragment>$\frac{n m^2}{\sigma}|_{\rm iso} < \frac{n m^2}{\sigma}|_{\rm disk}$
+								</ul>
 							</ul>
 						</div>
 						</div>
 					</section>
 
 					<section>
-						<img src="figures/params.png" width="100%" align="left">	
-					</section>
+					<h2>Population of binaries</h2>
+					<table width="100%">
+  					<thead>
+  					<tr>
+					    <td class="hh"><b>Parameter</b></td>
+					    <td class="hh">Distribution</td>
+
+				  	</tr>
+				  	</thead>
+				  	<tr>
+					    <td data-th="Parameter ">$m_1$</td>
+					    <td data-th="Distribution">$m_1^{-1.7}, 1 M_{\odot}\leq  m_1 \leq 60 M_{\odot}$ (Lu+2013)</td>
+				  	</tr>
+				  	<tr>
+					    <td data-th="Parameter ">$q$</td>
+					    <td data-th="Distribution">Uniform</td>
+				  	</tr>
+				  	<tr>
+					    <td data-th="Parameter "><b><font color=red>$e$</font></b></td>
+					    <td data-th="Distribution"><b><font color=red>0, Uniform, Thermal</font></b></td>
+				  	</tr>
+				  	<tr>
+					    <td data-th="Parameter ">$r_p/r_t$</td>
+					    <td data-th="Distribution">Uniform</td>
+				  	</tr>
+				  	<tr>
+						<td data-th="Parameter ">$\hat{L}_{\rm bin} \cdot \hat{L}_{\rm orb}$</td>
+					    <td data-th="Distribution">50% 1, 50% -1</td>
+				  	</tr>	
+					</table>
+				</section>
 
 					<section>
-							<h3>Method:</h3>
+					<h2>Method:</h2>
 							<ul>
+								<li class=fragment> Monte Carlo trials
 								<li class=fragment> Hill’s approximation (see Sari et al 2010). 
 								<li class=fragment> Validated against direct 3-body integrations (Archain).
 								<li class=fragment> Approximate initial binary COM orbit as parabolic.
 							</ul>
 					</section>
-				</section>
 
-				<section>
+
+<!-- 				<section>
 				<img src="figures/hist_es.svg" width="1300" align="left">	
 				<div class="container">
 				<div class="col">
@@ -153,7 +250,7 @@
 						</ul>
 				</div>
 				</div>
-				</section>
+				</section> -->
 
 <!-- 				<section>
 				<img src="figures/hist_as.svg" width="1300" align="left">	
@@ -168,7 +265,7 @@
 
 
 				<section data-transition="none">
-				<img src="figures/s2d_hist_thermal.svg" width="1300" align="left">	
+				<img src="figures/s2d_hist_0.svg" width="1300" align="left">	
 				<div class="container">
 				<div class="col">
 						<ul>
@@ -180,7 +277,7 @@
 
 
 				<section data-transition="none">
-				<img src="figures/s2d_hist_0.svg" width="1300" align="left">	
+				<img src="figures/s2d_hist_thermal.svg" width="1300" align="left">	
 				<div class="container">
 				<div class="col">
 						<ul>
@@ -190,30 +287,32 @@
 				</div>
 				</section>
 
+
+
 				<section>
 					<table width="100%">
   					<thead>
   					<tr>
 					    <td class="hh"><b>Binary Eccentricity</b></td>
-					    <td class="hh">Retrograde/Prograde</td>
+					    <!-- <td class="hh">Retrograde/Prograde</td> -->
 					    <td class="hh">Collisions (%)</td>
 
 				  	</tr>
 				  	</thead>
 				  	<tr>
 					    <td data-th="Binary Eccentricity ">0</td>
-					    <td data-th="Retrograde/Prograde">0.09</td>
-					    <td data-th="Collisions (%)">1.6</td>
+<!-- 					    <td data-th="Retrograde/Prograde">0.09</td>
+ -->					    <td data-th="Collisions (%)">1.6</td>
 				  	</tr>
 				  	<tr>
 					    <td data-th="Binary Eccentricity ">Uniform</td>
-					    <td data-th="Retrograde/Prograde">0.14</td>
-					    <td data-th="Collisions (%)">5.5</td>
+<!-- 					    <td data-th="Retrograde/Prograde">0.14</td>
+ -->					    <td data-th="Collisions (%)">5.5</td>
 				  	</tr>
 				  	<tr>
 					    <td data-th="Binary Eccentricity ">Thermal</td>
-					    <td data-th="Retrograde/Prograde">0.17</td>
-					    <td data-th="Collisions (%)">8.2</td>
+<!-- 					    <td data-th="Retrograde/Prograde">0.17</td>
+ -->					    <td data-th="Collisions (%)">8.2</td>
 				  	</tr>
 					</table>
 				</section>
@@ -238,8 +337,11 @@
 						<li class=fragment>
 							Non-zero binary eccentricity=>Greater collision probability
 							(see also Bradnick+2017)
-						<li class=fragment> May not be 		enough for S-stars to relax 
+						<li class=fragment> Not enough time for S-stars to relax 
 							via resonant relaxation.
+						<ul>
+							<li class=fragment> Torques from the disk are important?
+						</ul>
 					</ul>
 <!-- 						<li class=fragment> Non-zero initial binary eccentricity: stars are deposited at larger semi-major axes. 
  -->						
