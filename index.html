@@ -34,6 +34,7 @@
         .reveal h1 {text-align: left;}
         .reveal div {padding: 10px;}
         .reveal table { border-collapse: collapse; }
+        figure {position: relative; top:0px;}
         .reveal td, th {border: 5px solid white !important;}
 
         /*.reveal .slides > section > section { text-align:left; }*/
@@ -42,12 +43,14 @@
     	text-align: left;
     	font-size: 55% !important;
 		}
-		.figb figcaption {position: absolute; bottom: -50px; text-align: left; font-size: 70%;}
-		.figl figcaption {position: absolute; right: 10%; top:150px ; text-align: left; font-size: 60%;}
-		.hh {font-weight:bold !important; color: cyan; font-style: italic !important;}
+		.figt figcaption {position: absolute; left: 15px; top: -50px; text-align: center; font-size: 90%; background: black}
+		.figb figcaption {position: absolute; bottom: -50px; text-align: center; font-size: 90%;}
+/*		.figl figcaption {position: absolute; right: 10%; top:150px ; text-align: left; font-size: 60%;}
+*/		.hh {font-weight:bold !important; color: cyan; font-style: italic !important;}
 		.container{
 	    display: flex;
 	   	margin: 100px;
+	   	flex-wrap: wrap;
 
 		}
 		.col{
@@ -86,30 +89,38 @@
 			<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
 			<div class="slides">
 				<section>
-					<h1>Hills Mechanism and the Galactic Center</h1>
+					<h1>Part II: Hills Mechanism and the Galactic Center S-stars</h1>
 					<h3>Aleksey Generozov, Ann-Marie Madigan</h3>
-					<h3>CU Boulder</h3>
+<!-- 					<h3>University of Colorado, Boulder (Postdoc)</h3>
+ -->					<h3><a href=https://ui.adsabs.harvard.edu/abs/2020ApJ...896..137G/abstract>Generozov&Madigan 2020, ApJ, 896, 137</a></h3>
+ 						<h3><a href=https://ui.adsabs.harvard.edu/abs/2020arXiv200510267G/abstract>Generozov 2020a, arXiv:2005.10267, Accepted to ApJ</a></h3>
+ 						<h3><a href=https://ui.adsabs.harvard.edu/abs/2020arXiv201006614G/abstract>Generozov 2020b, arxiv:2010.06614, Submitted to MNRAS</a></h3>
+					<a href=../tidal_capture_2020/index.html>Part I</a>
+
 				</section>
 
-				<!--Possibly should include Fig 2 from Brown's review-->
+
+
 				<section>
-					<div style="text-align:left">
-						<video align="left" width="1300" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
-					</div>
+					<h2>Can young stars directly probe compact object population?</h2>
+<!-- 					<ul>
+						<li class=fragment>Can realistic binary population reproduce the S-stars?
+					</ul> -->
 				</section>
+
 
 				<section>
 							<div style="width=1200; height=100%; float: left;">
-								<video width=1200 muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
+								<video width=1200 muted controls><source data-src="figures/ghez_short.webm" type="video/webm" /></video>
 							</div>
 							<div class="container">
 							<div class="col">
 							<ul>
-								<li>Application: Galactic Center S-Stars
+								<li>Galactic Center S-Stars
 								<li class=fragment>Perets+2007: Binaries scattered from 
 									large distances by molecular clouds.
 								<li class=fragment>Madigan+2009*: Binary disruptions
-								from instability in an eccentric disk. 
+								from instability in disk. 
 							</ul>	
 							</div>
 							</div>
@@ -119,79 +130,78 @@
 
 				</section>
 
-<!-- 				<section>
-						<div class=videowrapper>
-							<video width="1200" muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
-						</div>
 
-						<div class="container">
+
+
+
+				<section>
+					<h2>Disk/S-star Connection</h2>
+
+					
+			    	<div class="container">
 						<div class="col">
 						<ul>
-							<li>Application: Galactic Center S-Stars
-							<li class=fragment>Perets+2007: Binaries scattered from 
-								large distances by molecular clouds.
-							<li class=fragment>Madigan+2009*: Binary disruptions
-							from instability in an eccentric disk. 
-						</ul>		
-						</div>
-					    </div>
+							<li class=fragment>Similar ages (Habibi+2017)
+							<li class=fragment>S5-HVS1 (~1700 km s$^{-1}$ velocity;<br>Koposov+2020)
+						</ul>
+				     	</div>
 
+
+						<div class="col">
+						<div  class=fragment style="height=50%; float: right;" title="Origin of S5-HVS1">
+									<figure class=figt>
+									<img src=figures/S5_HVS1_a.png>
+									<figcaption font-size=50>
+										Origin of S5-HVS1 (Koposov+2020)
+									</figcaption>
+									</figure>
+						</div>
+						<div  class=fragment style="height=50%; float: right; position:absolute;top:50;right:0; background=black;" title="REBOUND Simulation; Rein&Liu 2012">
+									<figure class=figt>
+									<video width=1050 muted controls><source data-src="figures/disk1.webm" type="video/webm"  /></video>
+									<figcaption font-size=50>
+										N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ potential
+									</figcaption>
+									</figure>
+						</div>
+						<div  class=fragment style="height=50%; float: right; position:absolute;top:50;right:0; background=black;" title="REBOUND Simulation; Rein&Liu 2012">
+							<figure class=figt>
+							<video width=1050 muted controls><source data-src="figures/disk2.webm" type="video/webm"  /></video>
+							<figcaption font-size=50>
+								N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.1}$ potential
+							</figcaption>
+							</figure>
+						</div>
+						</div>
+
+
+
+					</div>
 				</section>
- -->
-<!-- 
+
 				<section>
-						<div class="container">
-						<div class="col">
-							<video width="1200" muted controls><source data-src="figures/ghezGC_comp3-18_H264_864_VP8.webm" type="video/webm" /></video>
-						</div>
-						</div>
-						<div class="container">
-						<div class="col">
-						</div>
-							<ul>
-								<li>Application: Galactic Center S-Stars
-								<li class=fragment>Perets+2007: Binaries scattered from 
-									large distances by molecular clouds.
-								<li class=fragment>Madigan+2009*: Binary disruptions
-								from instability in an eccentric disk. 
-							</ul>		
-						</div>
+					<div style="text-align:left">
+						<video align="left" width="1300" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
+					</div>
 				</section>
- -->
+
+
 				<section>
-					<h2>This work: Revisiting Hills mechanism as the origin of the S-stars</h2>
-					<ul>
-						<li class=fragment>Large ensemble of encounters with realistic 
-							binary population
-						<li class=fragment>Can S-stars relax to the observed eccentricity distribution?
-					</ul>
+					<h2>Can realistic binary population reproduce the S-stars?</h2>
+<!-- 					<ul>
+						<li class=fragment>Can realistic binary population reproduce the S-stars?
+					</ul> -->
 				</section>
 
-<!-- 				<section>
-					<h2>Prograde vs. Retrograde</h2>
-					<img src="figures/disrupt_prob.svg" width="1300" align="left">
-					<div class="container">
-						<div class="col">
-							<ul>
-								<li>e=0 case is in Sari+2010
-							</ul>
-						</div>
-						</div>
-
-				</section> -->
 				
 					<section>	
 						<h2>Population of binaries</h2>
-						<img src="figures/sma_range.png" width="1100" align="left">	
+						<img src="figures/bin_range_t4.0e+06.svg" width="1100" align="left">	
 						<div class="container">
 						<div class="col">
 							<ul>
 								<li>Binaries in the disk
-								<li>Require binaries don't evaporate or merge after 4 Myr
-								<li>Evaporation is dominated by the disk stars
-								<ul>
-									<li class=fragment>$\frac{n m^2}{\sigma}|_{\rm iso} < \frac{n m^2}{\sigma}|_{\rm disk}$
-								</ul>
+								<li>Require binaries don't evaporate within 4 Myr (approximate age of disk)
 							</ul>
 						</div>
 						</div>
@@ -208,24 +218,24 @@
 				  	</tr>
 				  	</thead>
 				  	<tr>
-					    <td data-th="Parameter ">$a$</td>
-					    <td data-th="Distribution">$a^{-1}$</td>
+					    <td data-th="Parameter ">$a_{\rm bin}$</td>
+					    <td data-th="Distribution">$a_{\rm bin}^{-1}$</td>
 				  	</tr>
 				  	<tr>
-					    <td data-th="Parameter ">$m_1$</td>
-					    <td data-th="Distribution">$m_1^{-1.7}, 1 M_{\odot}\leq  m_1 \leq 60 M_{\odot}$ (Lu+2013)</td>
+					    <td data-th="Parameter ">$m_*$</td>
+					    <td data-th="Distribution">$m_*^{-1.7}, 8 M_{\odot}\leq  m_* \leq 15 M_{\odot}$ (Lu+2013)</td>
 				  	</tr>
-				  	<tr>
+				  	<!-- <tr>
 					    <td data-th="Parameter ">$q$</td>
 					    <td data-th="Distribution">Uniform</td>
 				  	</tr>
 				  	<tr>
 					    <td data-th="Parameter ">$r_p/r_t$</td>
 					    <td data-th="Distribution">Uniform</td>
-				  	</tr>
+				  	</tr> -->
 				  	<tr>
-					    <td data-th="Parameter "><b><font color=red>$e$</font></b></td>
-					    <td data-th="Distribution"><b><font color=red>0, Uniform, Thermal</font></b></td>
+					    <td data-th="Parameter ">$e$</td>
+					    <td data-th="Distribution">Thermal</td>
 				  	</tr>
 <!-- 				  	<tr>
 						<td data-th="Parameter ">$\hat{L}_{\rm bin} \cdot \hat{L}_{\rm orb}$</td>
@@ -235,135 +245,136 @@
 				</section>
 
 					<section>
-					<h2>Method:</h2>
+					<h2>Simulated binary disruptions:</h2>
 							<ul>
-								<li class=fragment> Monte Carlo trials
-								<li class=fragment> Hill’s approximation (see Sari et al 2010). 
-								<li class=fragment> Validated against direct 3-body integrations (Archain).
-								<li class=fragment> Approximate initial binary COM orbit as parabolic.
+								<li class=fragment> Direct 3-body integrations (AR--Chain; Mikkola&Merritt 2008).
+								<li class=fragment> Binary COM approaches tidal radius on eccentric orbit
+								<li class=fragment> Semimajor axis  of 0.05 pc (~Inner edge of disk)
 							</ul>
 					</section>
 
 
-<!-- 				<section>
-				<img src="figures/hist_es.svg" width="1300" align="left">	
-				<div class="container">
-				<div class="col">
-						<ul>
-							<li>Disrupted binaries: S-star eccentricity distribution
-						</ul>
-				</div>
-				</div>
-				</section> -->
-
-<!-- 				<section>
-				<img src="figures/hist_as.svg" width="1300" align="left">	
-				<div class="container">
-				<div class="col">
-						<ul>
-							<li>Disrupted binaries: S-star semi-major axis distribution
-						</ul>
-				</div>
-				</div>
-				</section> -->
 
 
 				<section data-transition="none">
-				<img src="figures/s2d_hist_0.svg" width="1800" align="left">	
-<!-- 				<div class="container">
-				<div class="col">
-						<ul>
-							<li>Disrupted binaries: S-star distribution
-						</ul>
-				</div>
-				</div> -->
+				<img src="figures/2d_hist_archain_Thermal_Rebound_Init_test.svg" width="1600" align="left">	
 				</section>
-
 
 				<section data-transition="none">
-				<img src="figures/s2d_hist_Thermal.svg" width="1800" align="left">	
-<!-- 				<div class="container">
-				<div class="col">
-						<ul>
-							<li>Disrupted binaries: S-star distribution
-						</ul>
-				</div>
-				</div> -->
+				<h2>History and overview of resonant relaxation</h2>
+				<ul>
+					<li> Rauch&Tremaine 1996
+					<li>Antonini&Merritt 2013
+					<li>Bar-Or&Fouvry 2018 
+					<div class=figure>
+						<figure position=absolute; top=0px>
+							<img src=figures/rr_vis_red3.png width="20%">
+						</figure>
+					</div>
+					<li class=fragment><b>Must be effective over ~10 Myr lifetimes.</b>
+
+				</ul>
 				</section>
 
+				<section data-transition="none">
+				<h2>Galactic Center Density</h2>
+				<ul>
+					<li> Likely $\sim 10^4$ BHs in central pc
+					<li> Mass segregation (e.g. Morris 1993) or in-situ formation in disk (Generozov et al 2018)
+					<li> Here $m_*(a)=6.7\times 10^4 \left(\frac{a}{0.1 {\rm pc}}\right)^{1.25} M_{\odot}$ and $m_{\rm bh}(a)=2.4\times 10^4 \left(\frac{a}{0.1 {\rm pc}}\right) M_{\odot}$ (Antonini&Merritt 2013)
+				</ul> 
+				</section>
+				
+
+				<section data-transition="none">
+				<img src="figures/diff_coeff_b.svg" width="1800" align="left">	
+				</section>
 
 
 				<section>
-					<table width="100%">
-  					<thead>
-  					<tr>
-					    <td class="hh"><b>Binary Eccentricity</b></td>
-					    <!-- <td class="hh">Retrograde/Prograde</td> -->
-					    <td class="hh">Collisions (%)</td>
+							<div style="width=1800; height=100%; float: left;">
+								<video width=1800 muted controls><source data-src="figures/rr.webm" type="video/webm" /></video>
+							</div>
+							<div class="container">
+							<div class="col">
+							<ul>
+							</ul>	
+							</div>
+							</div>
+							<aside class="notes">
+							</aside>
 
-				  	</tr>
-				  	</thead>
-				  	<tr>
-					    <td data-th="Binary Eccentricity ">0</td>
-<!-- 					    <td data-th="Retrograde/Prograde">0.09</td>
- -->					    <td data-th="Collisions (%)">3.2</td>
-				  	</tr>
-				  	<tr>
-					    <td data-th="Binary Eccentricity ">Uniform</td>
-<!-- 					    <td data-th="Retrograde/Prograde">0.14</td>
- -->					    <td data-th="Collisions (%)">5.5</td>
-				  	</tr>
-				  	<tr>
-					    <td data-th="Binary Eccentricity ">Thermal</td>
-<!-- 					    <td data-th="Retrograde/Prograde">0.17</td>
- -->					    <td data-th="Collisions (%)">7.5</td>
-				  	</tr>
-					</table>
 				</section>
 
-				<section>
-				<img src="figures/trr.svg" width="1300" align="left">	
-				<div class="container">
-				<div class="col">
-						<ul>
-							<li>Galactic Center: (scalar) resonant relaxation time.
-							<li>S-stars are observed to have a thermal distribution.
-						</ul>
-				</div>
-				</div>
-				</section>
 
 				<section>
 					<h2>Conclusions</h2>
 					<ul>
-						<li class=fragment> Evaporation
-							of binaries in disk is likely dominated by other disk stars.
-						<li class=fragment>
-							Non-zero binary eccentricity=>Greater collision probability
-							(see also Bradnick+2017)
-						<li class=fragment> Not enough time for S-stars to relax 
-							via resonant relaxation.
-						<ul>
-							<li class=fragment> Torques from the disk are important?
-						</ul>
+						<li class=fragment> Binary disruption + Relaxation can explain observed S-stars (similar to Antonini&Merritt2013).
+						<li class=fragment> Requires ~1000 black holes within central 0.1 pc.
 					</ul>
+				</section>
 <!-- 						<li class=fragment> Non-zero initial binary eccentricity: stars are deposited at larger semi-major axes. 
  -->						
 <!--  <li class=fragment> Enhances collision probability (cf. Bradnick+2017) -->
 <!-- 						<li class=fragment> Not enough time for S-stars to relax via resonant relaxation. -->
+<!-- 					</ul>
+				</section>
+ -->
+
+				<section>
+					<h2>Hypervelocity stars</h2>
+<!-- 					<ul>
+						<li class=fragment>Can realistic binary population reproduce the S-stars?
+					</ul> -->
+				</section>
+
+
+				<section data-transition="none">
+				<img src="figures/ixySpread.svg" width="1800" align="left">	
+				</section>
+
+				<section data-transition="none">
+				<img src="figures/izSpread.svg" width="1800" align="left">	
+				</section>
+
+
+				<section data-transition="none">
+				<img src="figures/hvs_potential.svg" width="1800" align="left">	
+				</section>
+
+
+				<section data-transition="none">
+				<img src="figures/hvs_dist.svg" width="1800" align="left">	
+				</section>
+
+				<section data-transition="none">
+				<img src="figures/hvs_stream_contour_og.svg" width="1800" align="left">	
+				</section>
+
+
+				<section>
+					<h2>S-Star mass function</h2>
+					<ul>
+						<li class=fragment>What are the chances of 20 B-stars and no O-stars?
+						<li class=fragment>Sampling/Mass ratio effects
 					</ul>
 				</section>
 
-				<section>
-					<img src="figures/archain.svg">
-				</section>
-
-				<section>
-					<img src="figures/archain2.svg">
+				<section data-transition="none">
+				<img src="figures/posteriorMarg.svg" width="1800" align="left">	
 				</section>
 
 
+				<section><h1>Final conclusions</h1>
+					<ul>
+						<li class=fragment> Dark cusp: $\sim$ 10^4 BHs within central parsec
+						<li class=fragment> S-star disk/Disk Connection
+						<li class=fragment> Conical stream of hypervelocity stars
+					</ul>
+					
 
+				</section>
 
 
 			</div>
