@@ -58,7 +58,7 @@
 
 		}
 		.col{
-	    flex: 1;
+	    	flex: 1;
 		}
 /*		.video-wrapper {
  		 position: relative;
@@ -113,7 +113,7 @@
 			<div class="slides">
 				<section>
 					<h1>Formation and evolution of young stars in the Galactic Center</h1>
-					<h3>Aleksey Generozov, Sergei Nayakshin, Ann-Marie Madigan</h3>
+					<h3>Aleksey Generozov</h3>
 					<h3>Technion (Previously University of Colorado Boulder)</h3>
 					
  		
@@ -163,28 +163,26 @@
 						<div class="col" >
 
 						<div  class="fragment step-fade-in-then-out" style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
-									<figure class=figt>
-									<video id="myVideo" width=1000 muted controls align=right><source data-src="figures/disk1.webm" type="video/webm" />
-												<script>
-													var pausing_function = function(){
-													    if(this.currentTime >= 2) {
-													        this.pause();
+								<figure class=figt>
+								<video id="myVideo" width=1000 muted controls align=right><source data-src="figures/disk1.webm" type="video/webm" />
+								<script>
+									var pausing_function = function(){
+										if(this.currentTime>= 2) {
+											this.pause();
+                                                                                               // remove the event listener after you paused the playback
+                                                                                        }
+                                                                                };
+                                                                               var vid = document.getElementById("myVideo");
+                                                                               vid.addEventListener("timeupdate", pausing_function);
+                                                                </script>   
 
-													        // remove the event listener after you paused the playback
-													        this.removeEventListener("timeupdate",pausing_function);
-													    }
-													};
-													var vid = document.getElementById("myVideo");
-													vid.addEventListener("timeupdate", pausing_function);
-												</script>
+								</video>
 
-									</video>
-
-									
-									<figcaption font-size=50>
-										N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
-									</figcaption>
-									</figure>
+								
+								<figcaption font-size=50>
+									N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
+								</figcaption>
+								</figure>
 						</div>
 						<div  class=fragment style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
 							<figure class=figt>
@@ -202,7 +200,7 @@
 					<ul>
 						<li class=fragment>Bonell&Rice 2008, Gualandris et 2012 
 						<li class=fragment>Eccentric disc, but no extreme eccentricities
-						<li class=fragment>Try to find conditions that work...
+						<li class=fragment>Try to find conditions that work (Generozov, Nayakshin, and Madigan 2022)
 					</ul>
 				</section>
 
@@ -214,6 +212,11 @@
 				<section>
 					<h2>Simulation setup</h2>
 					<img width=1700 src="figures/simulation_schematic_b.svg" align=left >
+				</section>
+
+				<section>
+					<h2>Simulation setup</h2>
+					<img width=1700 src="figures/simulation_schematic_c.svg" align=left >
 				</section>
 
 				<section>
@@ -330,7 +333,7 @@
 
 				<section>
 					<div style="text-align:left">
-						<video align="left" width="1800" muted controls><source data-src="figures/example_disruption_new.webm" type="video/webm" /></video>
+						<video align="left" width="1800" muted controls><source data-src="figures/example_disruption_newb.webm" type="video/webm" /></video>
 					</div>
 				</section>
 
@@ -389,7 +392,7 @@
 
 
 				<section data-transition="none">
-				<img src="figures/2d_hist_archain_Thermal_Rebound_Init_test.svg" width="1600" align="left">	
+				<img src="figures/2d_hist_archain_Thermal_Rebound_Init_test.svg" width="1800" align="left">	
 				</section>
 
 				<section data-transition="none">
@@ -507,13 +510,13 @@
 
 				<section>
 				<h2>Observations: Velocity distribution</h2>
-				<img src="figures/brown.svg" width="1700" align="left">	
+				<img src="figures/brown.svg" width="1800" align="left">	
 				</section>
 
 				<section>
 				<h2>Observations: Velocity distribution</h2>
 				<ul>
-					<li class=fragment> Models predict ~40-60% of stars should be above 700 km/s ...
+					<li class=fragment> Models predict ~40-60% of stars should be above 700 km/s [Rossi+2014]
 				</ul>
 				</section>
 
@@ -566,6 +569,8 @@
 						<li class=fragment> S stars produced by binary disruptions.
 						<li class=fragment> Mass and velocity of initial cloud can be constrained.
 						<li class=fragment> Disruption also produce clustered ejected stars
+						<li class=fragment> HVS velocity distribution: tension 
+							between theory and observations...
 					</ul>
 				</section>
 
@@ -673,6 +678,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				slideNumber:true,
 				width: 1920,
 				height: 1080,
 				// Factor of the display size that should remain empty around the content
