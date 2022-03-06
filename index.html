@@ -434,7 +434,17 @@
 
 				<section>
 							<div style="width=1800; height=100%; float: left;">
-								<video width=1800 muted controls><source data-src="figures/rr.webm" type="video/webm" /></video>
+								<video id=myVideo2 width=1800 muted controls><source data-src="figures/rr.webm" type="video/webm" /></video>
+								<script>
+									var pausing_function = function(){
+										if(this.currentTime>= 1.7) {
+											this.pause();
+                                                                                               // remove the event listener after you paused the playback
+                                                                                        }
+                                                                                };
+                                                                               var vid = document.getElementById("myVideo2");
+                                                                               vid.addEventListener("timeupdate", pausing_function);
+                                                                </script>   
 							</div>
 							<div class="container">
 							<div class="col">
