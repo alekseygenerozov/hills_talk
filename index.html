@@ -24,10 +24,10 @@
 
 
 
-							
+
 		<style type="text/css">
-        p { text-align: left; 
-        } 
+        p { text-align: left;
+        }
         .reveal section img { background:none; border:none; box-shadow:none; max-width: none; max-height: none;}
         .reveal li {text-align: left; font-size: 55px;}
         .reveal table {frame: box; font-size: 60px;}
@@ -101,7 +101,7 @@
 		  height: auto;
 		}
 
-    </style> 
+    </style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -114,9 +114,9 @@
 				<section>
 					<h1>Formation and evolution of young stars in the Galactic Center</h1>
 					<h3>Aleksey Generozov</h3>
-					<h3>Technion (Previously University of Colorado Boulder)</h3>
-					
- 		
+					<h3>Technion</h3>
+
+
 
 				</section>
 
@@ -130,11 +130,11 @@
 							<div class="col">
 							<ul>
 								<li>Galactic Center S Stars
-								<li class=fragment>Perets+2007: Binaries scattered from 
+								<li class=fragment>Perets+2007: Binaries scattered from
 									large distance.
 								<li class=fragment>Madigan+2009*: Binary disruptions
-								from instability in disk. 
-							</ul>	
+								from instability in disk.
+							</ul>
 							</div>
 							</div>
 							<aside class="notes">
@@ -149,36 +149,32 @@
 
 				<section>
 					<h2>Disk/S star Connection</h2>
-
-					
-			    	<div class="container">
+					<div class="container">
 						<div class="col">
 						<ul>
 							<li class=fragment>Similar ages (Habibi+2017)
 							<li class=fragment>S5-HVS1 (~1700 km s$^{-1}$ velocity;<br>Koposov+2020)
 						</ul>
-				     	</div>
+				    </div>
 
 
 						<div class="col" >
-
 						<div  class="fragment step-fade-in-then-out" style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
 								<figure class=figt>
-								<video id="myVideo" width=1000 muted controls align=right><source data-src="figures/disk1.webm" type="video/webm" />
-								<script>
-									var pausing_function = function(){
-										if(this.currentTime>= 2) {
-											this.pause();
-                                                                                               // remove the event listener after you paused the playback
-                                                                                        }
-                                                                                };
-                                                                               var vid = document.getElementById("myVideo");
-                                                                               vid.addEventListener("timeupdate", pausing_function);
-                                                                </script>   
-
-								</video>
-
-								
+									<video id="myVideo" width=1000 muted controls align=right>
+									<source src="figures/disk1.webm" type="video/webm">
+									<script>
+															var pausing_function = function(){
+															    if(this.currentTime >= 2) {
+															        this.pause();
+															        // remove the event listener after you paused the playback
+															        this.removeEventListener("timeupdate",pausing_function);
+															    }
+															};
+															var vid = document.getElementById("myVideo");
+															vid.addEventListener("timeupdate", pausing_function);
+									</script>
+									</video>
 								<figcaption font-size=50>
 									N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
 								</figcaption>
@@ -186,9 +182,9 @@
 						</div>
 						<div  class=fragment style="position:absolute;top:50;right:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
 							<figure class=figt>
-							<video width=1000 muted controls><source data-src="figures/disk2.webm" type="video/webm"  /></video>
+							<video width=1000 muted controls><source data-src="figures/disk1.webm" type="video/webm"></video>
 							<figcaption font-size=50>
-								N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.1}$ density
+								N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
 							</figcaption>
 							</figure>
 						</div>
@@ -198,7 +194,7 @@
 				<section>
 					<h2>Formation: Molecular cloud disruption</h2>
 					<ul>
-						<li class=fragment>Bonell&Rice 2008, Gualandris et 2012 
+						<li class=fragment>Bonell&Rice 2008, Gualandris et 2012
 						<li class=fragment>Eccentric disc, but no extreme eccentricities
 						<li class=fragment>Try to find conditions that work (Generozov, Nayakshin, and Madigan 2022)
 					</ul>
@@ -233,7 +229,7 @@
 					<ul>
 						<li class=fragment>Controls precession!
 						<li class=fragment>Assume fixed $r^{-1.16}$ density (Schodel+2018)
-						<li class=fragment>$1.2\times 10^6 M_{\odot}$ inside central pc. 
+						<li class=fragment>$1.2\times 10^6 M_{\odot}$ inside central pc.
 					</ul>
 
 				</section>
@@ -256,19 +252,19 @@
 
 
 				<section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_gas_0.0.svg" width="1800" align="left">	
+					<img src="figures/lz_gas_0.0.svg" width="1800" align="left">
 				</section>
 
 				<section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_gas_400.0.svg" width="1800" align="left">	
+					<img src="figures/lz_gas_400.0.svg" width="1800" align="left">
 				</section>
 
 				<section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_gas_1470.0.svg" width="1800" align="left">	
+					<img src="figures/lz_gas_1470.0.svg" width="1800" align="left">
 				</section>
 
 				<section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_all_1470.0.svg" width="1800" align="left">	
+					<img src="figures/lz_all_1470.0.svg" width="1800" align="left">
 				</section>
 
 				<section><h2>Continuing evolution of eccentric disc</h2>
@@ -281,16 +277,16 @@
 				</section>
 
 				<section><h2>Bulk properties: Eccentricity </h2>
-					<img src="figures/e_if1.svg" width="1800" align="left">	
+					<img src="figures/e_if1.svg" width="1800" align="left">
 				</section>
 
 				<section><h2>Bulk properties: Eccentricity </h2>
-					<img src="figures/e_if1_cut.svg" width="1800" align="left">	
+					<img src="figures/e_if1_cut.svg" width="1800" align="left">
 				</section>
 
 
 				<section><h2>Bulk properties: Surface density </h2>
-					<img src="figures/surf_dens_obs.svg" width="1800" align="left">	
+					<img src="figures/surf_dens_obs.svg" width="1800" align="left">
 				</section>
 
 				<section><h2>Caveats</h2>
@@ -307,8 +303,8 @@
 						<li class=fragment>'Disruption'=Passing within $3\times 10^{-4}$ pc of SMBH
 						<li class=fragment>Tidal radius of $20 M_{\odot}, 1$ AU Binary
 					</ul>
-				</section>	
-<!-- 
+				</section>
+<!--
 				<section><h2>Disruptions: Time distribution</h2>
 					<img align="left" width="1800" src="figures/dist1_a.svg">
 				</section>
@@ -338,9 +334,9 @@
 				</section>
 
 
-					<section>	
+					<section>
 						<h2>Population of binaries</h2>
-						<img src="figures/bin_range_t4.0e+06.svg" width="1100" align="left">	
+						<img src="figures/bin_range_t4.0e+06.svg" width="1100" align="left">
 						<div class="container">
 						<div class="col">
 							<ul>
@@ -377,7 +373,7 @@
 				  	</table>
 				 	</section>
 
-	
+
 
 					<section>
 					<h2>Simulated binary disruptions:</h2>
@@ -392,13 +388,13 @@
 
 
 				<section data-transition="none">
-				<img src="figures/2d_hist_archain_Thermal_Rebound_Init_test.svg" width="1800" align="left">	
+				<img src="figures/2d_hist_archain_Thermal_Rebound_Init_test.svg" width="1800" align="left">
 				</section>
 
 				<section data-transition="none">
 				<h2>Resonant relaxation</h2>
 				<ul>
-					<li> Rauch&Tremaine 1996, Perets et al 2009, Merritt et al 2011, Antonini&Merritt 2013, Bar-Or&Fouvry 2018 
+					<li> Rauch&Tremaine 1996, Perets et al 2009, Merritt et al 2011, Antonini&Merritt 2013, Bar-Or&Fouvry 2018
 					<div class=figure>
 						<figure position=absolute; top=0px>
 							<img src=figures/rr_vis_red3.png width="20%">
@@ -414,42 +410,44 @@
 				<ul>
 					<li> $m_{\rm bh}(r)=2.4\times 10^4 \left(\frac{r}{0.1 {\rm pc}}\right) M_{\odot}$ (Antonini&Merritt 2013)
 					<li> $\sim 10^3$ BHs in central 0.1 pc mass segregation (e.g. Morris 1993) or in-situ formation in disk (Generozov et al 2018)
-				</ul> 
+				</ul>
 				</section>
 
 
 				<section><h2>Diffusion coefficient(s)</h2>
 				<ul>
-					<li> Use formalism from Bar-Or&Fouvry 2018 
+					<li> Use formalism from Bar-Or&Fouvry 2018
 					<li>$\frac{\partial P}{\partial t} =\frac{1}{2} \frac{\partial}{\partial j}\left[j D_{jj} \frac{\partial}{\partial j}\left[\frac{P}{j}\right]\right]$
 				</ul>
 
 				</section>
-				
+
 
 				<section data-transition="none">
-				<img src="figures/diff_coeff_b.svg" width="1800" align="left">	
+				<img src="figures/diff_coeff_b.svg" width="1800" align="left">
 				</section>
 
 
 				<section>
 							<div style="width=1800; height=100%; float: left;">
-								<video id=myVideo2 width=1800 muted controls><source data-src="figures/rr.webm" type="video/webm" /></video>
+								<video id=myVideo2 width=1800 muted controls><source src="figures/rr.webm" type="video/webm" >
 								<script>
-									var pausing_function = function(){
-										if(this.currentTime>= 1.7) {
-											this.pause();
-                                                                                               // remove the event listener after you paused the playback
-                                                                                        }
-                                                                                };
-                                                                               var vid = document.getElementById("myVideo2");
-                                                                               vid.addEventListener("timeupdate", pausing_function);
-                                                                </script>   
+														var pausing_function2 = function(){
+																if(this.currentTime >= 1.7) {
+																		this.pause();
+																		// remove the event listener after you paused the playback
+																		this.removeEventListener("timeupdate",pausing_function2);
+																}
+														};
+														var vid2 = document.getElementById("myVideo2");
+														vid2.addEventListener("timeupdate", pausing_function2);
+								</script>
+								</video>
 							</div>
 							<div class="container">
 							<div class="col">
 							<ul>
-							</ul>	
+							</ul>
 							</div>
 							</div>
 							<aside class="notes">
@@ -470,7 +468,7 @@
 				   	<figure class=figb>
 				    <img src="figures/mass_ratio_2.svg"  style="position:absolute;top:50;left:0;" width="1000" />
 				    	<figcaption>
-				    		See Sari+2010 
+				    		See Sari+2010
 				    	</figcaption>
 					</figure>
 					</div>
@@ -479,7 +477,7 @@
 
 				<section data-transition="none">
 
-					<img src="figures/posteriorMarg.svg" width="1800" align="left" />	
+					<img src="figures/posteriorMarg.svg" width="1800" align="left" />
 				</section>
 
 
@@ -496,16 +494,16 @@
 
 
 				<section data-transition="none"><h2>Model Galactic Potential</h2>
-				<img src="figures/hvs_potential.svg" width="1800" align="left">	
+				<img src="figures/hvs_potential.svg" width="1800" align="left">
 				</section>
 
 
 				<section data-transition="none"><h2>After 5 Myr Propagation</h2>
-				<img src="figures/hvs_dist.svg" width="1800" align="left">	
+				<img src="figures/hvs_dist.svg" width="1800" align="left">
 				</section>
 
 				<section data-transition="none"><h2>Angular distribution (Generozov 2020)</h2>
-				<img src="figures/hvs_stream_contour_corr.svg" width="1700" align="left">	
+				<img src="figures/hvs_stream_contour_corr.svg" width="1700" align="left">
 				</section>
 
 
@@ -520,7 +518,7 @@
 
 				<section>
 				<h2>Observations: Velocity distribution</h2>
-				<img src="figures/brown.svg" width="1800" align="left">	
+				<img src="figures/brown.svg" width="1800" align="left">
 				</section>
 
 				<section>
@@ -560,16 +558,16 @@
 
 				<section>
 					<h2>Repeated encounters?</h2>
-					<img src="figures/adisk_example_0.1.svg" width="900" align="left">	
-					<img src="figures/edisk_example_0.1.svg" width="882.77" align="left">	
+					<img src="figures/adisk_example_0.1.svg" width="900" align="left">
+					<img src="figures/edisk_example_0.1.svg" width="882.77" align="left">
 				</section>
 
 
 				<section>
 					<h2>Predicted velocity distribution</h2>
-						
-					<img src="figures/vcomp_disk_1_tmin0.0.svg" width="1800" align="left">	
-							
+
+					<img src="figures/vcomp_disk_1_tmin0.0.svg" width="1800" align="left">
+
 				</section>
 
 
@@ -579,7 +577,7 @@
 						<li class=fragment> S stars produced by binary disruptions.
 						<li class=fragment> Mass and velocity of initial cloud can be constrained.
 						<li class=fragment> Disruption also produce clustered ejected stars
-						<li class=fragment> HVS velocity distribution: tension 
+						<li class=fragment> HVS velocity distribution: tension
 							between theory and observations...
 					</ul>
 				</section>
@@ -589,7 +587,7 @@
 
 				<section><h2>Dependence on background density profile</h2>
 					<ul>
-						<li class=fragment> Steady-state density profile is steeper 
+						<li class=fragment> Steady-state density profile is steeper
 						<li class=fragment> $r^{-1.5}-r^{-1.75}$ for low mass stars
 						<li class=fragment> $r^{-2}$ for stellar mass black holes...
 					</ul>
@@ -617,41 +615,41 @@
 
 
 				<section><h2>Preliminary results on the effects of the mass function</h2>
-					<img src="figures/e_if1_cut_mf.svg" width="1800" align="left">	
+					<img src="figures/e_if1_cut_mf.svg" width="1800" align="left">
 				</section>
 
 
-<!-- 
-				<section>	
+<!--
+				<section>
 					<h2>Future: A closer look at binary evaporation...</h2>
 					<ul>
-						<li class=fragment> Goal: prescription for survival time of soft binaries in any cluster 
-						<li class=fragment> Including different geometries, velocity anisotropy etc. 
-						<li class=fragment> Applications to graviational wave sources. 
+						<li class=fragment> Goal: prescription for survival time of soft binaries in any cluster
+						<li class=fragment> Including different geometries, velocity anisotropy etc.
+						<li class=fragment> Applications to graviational wave sources.
 					</ul>
 				</section>
 
 
-				<section>	
+				<section>
 					<h2>Review of spherical case: two regimes.</h2>
 					<img src=figures/evap_slide.png align="left"/>
 				</section>
 
 
-				<section>	
+				<section>
 					<h2>Two regimes.</h2>
 					<ul>
 						<li class=fragment> Separated by $m_c=m_{\rm bin} \frac{v_p}{v_{\rm bin}}$ (Hut, Bahcall and Tremaine 1985)
 						<li class=fragment> $ \frac{m_p}{m_c} \propto \left(\frac{v_p}{v_c}\right)^{-1} $
-						<li class=fragment> For case 1 [2]: Cross-section $\propto (v_p/v_c)^{-2} [(v_p/v_c)^{-1}]$ 
-					</ul>	
+						<li class=fragment> For case 1 [2]: Cross-section $\propto (v_p/v_c)^{-2} [(v_p/v_c)^{-1}]$
+					</ul>
 				</section>
 
 
 				<section>
 					<h2>Numerical ionization cross-sections (Fewbody)</h2>
-					<img src="figures/fewbodyCross_1.0.svg" width="900" align="left">	
-					<img src="figures/fewbodyCross_20.0.svg" width="900" align="right">	
+					<img src="figures/fewbodyCross_1.0.svg" width="900" align="left">
+					<img src="figures/fewbodyCross_20.0.svg" width="900" align="right">
 
 
 				</section>
@@ -659,10 +657,10 @@
 				<section>
 					<h2>Numerical exploration of binary survival (REBOUND)</h2>
 					<ul>
-						<li class=fragment> 2 solar mass mass binary 
+						<li class=fragment> 2 solar mass mass binary
 						<li class=fragment> Embedded in spherical shell ~0.3 pc from 4 million solar mass black hole
 						<li class=fragment> Shell orbits don't interact with each other. But do precess.
-					</ul>					
+					</ul>
 
 
 				</section>
@@ -670,12 +668,12 @@
 
 				<section>
 					<h2>Numerical exploration of binary survival</h2>
-					<img src="figures/bin_lifetime.svg" width="1800" align="left">	
+					<img src="figures/bin_lifetime.svg" width="1800" align="left">
 				</section>
 
 
  -->
-				
+
 
 			</div>
 		</div>
@@ -697,7 +695,7 @@
 				minScale: 0.2,
 				maxScale: 1.5,
 				history: true,
-				transition: 'none', 
+				transition: 'none',
 				math: {
 					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
 					config: 'TeX-AMS_HTML-full'
