@@ -48,7 +48,7 @@
     	font-size: 55% !important;
 		}
 		.figt figcaption {position: absolute; left: 0px; top: -50px; text-align: center; font-size: 85%; background: rgba(0, 0, 0, 0);}
-		.figb figcaption {position: absolute; bottom: -50px; text-align: center; font-size: 85%;}
+		.figb figcaption {position: absolute; caption-side: bottom;  font-size: 85%; vertical-align: top;}
 /*		.figl figcaption {position: absolute; right: 10%; top:150px ; text-align: left; font-size: 60%;}
 */		.hh {font-weight:bold !important; color: cyan; font-style: italic !important;}
 		.container{
@@ -60,21 +60,18 @@
 		.col{
 	    	flex: 1;
 		}
-/*		.video-wrapper {
- 		 position: relative;
-  		 height: 100%;
-  		 padding-top: 25px;
-  		 width: 100;
-  		 margin: 100;
-		}*/
 
-/*		.video {horizontal-align: right;}
-*/
 		.column {
 	  	width: 50%
 	  	height: 100%;
 	  	clear: bottom;
 	    }
+
+		#col3 .column {
+				width: 30%
+				height: 100%;
+				clear: bottom;
+		}
 
 		.row:{
   		content: "";
@@ -100,6 +97,13 @@
 		  width: 1000%;
 		  height: auto;
 		}
+		.controls[data-state="hidden"] {
+  	width: 50%;
+		}
+		.controls button:hover,
+		.controls button:focus {
+  	opacity: 0.5;
+		}
 
     </style>
 	</head>
@@ -113,14 +117,52 @@
 			<div class="slides">
 				<section>
 					<h1>Formation and evolution of young stars in the Galactic Center</h1>
-					<h3>Aleksey Generozov</h3>
+					<h2>Aleksey Generozov</h2>
 					<h3>Technion</h3>
+					<h3 class=fragment>Collaborators: Ann-Marie Madigan, Sergei Nayakshin, Hagai Perets
+					</h3>
+				</section>
+
+
+				<section><h2>Why study the Galactic Center?</h2>
+					<ul>
+						<li> Unmatched resolution!
+						<!-- <li class=fragment> Constrain uncertain populations, and accretion physics, etc. -->
+						<li class=fragment> Applications to:
+					</ul>
+					<div class=container>
+					<!-- <div class=col>
+						<div class=fragment>
+						<figure class=figb class=fragment align="left">
+							<img height="300" src=figures/Tidal-Disruption-Event.jpg style="position:relative;bottom:0" />
+						<figcaption>Tidal disruption events <br/> Credit: NASA / CXC / M. Weiss.</figcaption>
+						</figure>
+						</div>
+					</div> -->
+
+						<div class=col>
+							<div class=fragment>
+							<figure class=figb class=fragment align="left">
+								<img height="500" src=figures/ns_gw_art.jpg style="position:relative;bottom:0" />
+							<figcaption>Gravitational wave sources <br/> Credits: R. Hurt/Caltech-JPL</figcaption>
+							</figure>
+							</div>
+						</div>
+
+
+						<div class=col>
+							<div class=fragment>
+							<figure class=figb class=fragment align="left">
+								<img height="500" src=figures/fermi_bubbles.webp   />
+							<figcaption>Accretion physics<br/> Credit: NASA Goddard</figcaption>
+							</figure>
+							</div>
+						</div>
+					</div>
 
 
 
 				</section>
-
-
 
 				<section>
 							<div style="width=1200; height=100%; float: left;">
@@ -130,8 +172,9 @@
 							<div class="col">
 							<ul>
 								<li>Galactic Center S Stars
+								Eckart&Genzel1997, Ghez+1998
 								<li class=fragment>Perets+2007: Binaries scattered from
-									large distance.
+									>1 pc distances
 								<li class=fragment>Madigan+2009*: Binary disruptions
 								from instability in disk.
 							</ul>
@@ -192,7 +235,7 @@
 				</section>
 
 				<section>
-					<h2>Formation: Molecular cloud disruption</h2>
+					<h2>Disc formation: Molecular cloud disruption</h2>
 					<ul>
 						<li class=fragment>Bonell&Rice 2008, Gualandris et 2012
 						<li class=fragment>Eccentric disc, but no extreme eccentricities
@@ -225,7 +268,7 @@
 				</section>
 
 				<section>
-					<h2>Background density</h2>
+					<h2>Simulation setup: Background density</h2>
 					<ul>
 						<li class=fragment>Controls precession!
 						<li class=fragment>Assume fixed $r^{-1.16}$ density (Schodel+2018)
@@ -236,7 +279,7 @@
 
 
 				<section>
-					<h2>Evolution of example cloud</h2>
+					<h2>Evolution of disrupted cloud</h2>
 					<div class="container">
 						<div class="column">
 							<video width=1350 src="figures/movie-cloud1-R05-snap2.mp4" controls >
@@ -250,7 +293,7 @@
 					</div>
 				</section>
 
-
+<!-- Make this section shorter! Just mention counter-rotating populations -->
 				<section><h2>Angular momentum distribution of the disc</h2>
 					<img src="figures/lz_gas_0.0.svg" width="1800" align="left">
 				</section>
@@ -267,7 +310,7 @@
 					<img src="figures/lz_all_1470.0.svg" width="1800" align="left">
 				</section>
 
-				<section><h2>Continuing evolution of eccentric disc</h2>
+				<section><h2>Gas <span>&#8594;</span>  N-body </h2>
 					<div>
 						   <img width=900 data-src="figures/surf_density.png" align="left"/>
 					</div>
@@ -276,16 +319,16 @@
 					</div>
 				</section>
 
-				<section><h2>Bulk properties: Eccentricity </h2>
+				<section><h2> Observational comparison: Eccentricity </h2>
 					<img src="figures/e_if1.svg" width="1800" align="left">
 				</section>
 
-				<section><h2>Bulk properties: Eccentricity </h2>
+				<section><h2> Observational comparison: Eccentricity </h2>
 					<img src="figures/e_if1_cut.svg" width="1800" align="left">
 				</section>
 
 
-				<section><h2>Bulk properties: Surface density </h2>
+				<section><h2> Observational comparison: Surface density </h2>
 					<img src="figures/surf_dens_obs.svg" width="1800" align="left">
 				</section>
 
@@ -298,7 +341,7 @@
 					</ul>
 				</section>
 
-				<section><h2>Binary disruption statistics</h2>
+				<section><h2>Binary disruptions</h2>
 					<ul>
 						<li class=fragment>'Disruption'=Passing within $3\times 10^{-4}$ pc of SMBH
 						<li class=fragment>Tidal radius of $20 M_{\odot}, 1$ AU Binary
@@ -313,29 +356,37 @@
 					<img align="left" width="1800" src="figures/dist1_c.svg">
 				</section>
  -->
-				<section><h2>Disruptions: Time distribution</h2>
+				<section><h2>Disruption times</h2>
 					<img align="left" width="1800" src="figures/dist1_d.svg">
 				</section>
 
 
-				<section><h2>Disruptions </h2>
+				<section><h2>Disruptions: Angular distribution </h2>
 					<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
 				</section>
 
 
 				<section>
-					<h2>Can realistic binary population reproduce the S stars? (Generozov&Madigan 2020)</h2>
+					<h2>Reproducing the S-star orbits (Generozov&Madigan 2020)</h2>
 				</section>
 
-				<section>
+				<section><h2>Binary disruptions 101</h2>
 					<div style="text-align:left">
-						<video align="left" width="1800" muted controls><source data-src="figures/example_disruption_newb.webm" type="video/webm" /></video>
+						<video align="left" width="1800" muted controls><source data-src="figures/example_disruption.webm" type="video/webm" /></video>
 					</div>
+				</section>
+
+				<section><h2>Binary disruptions 101</h2>
+						<img align="left" width="1800" src="figures/example_disruption_end1.png">
+				</section>
+
+				<section><h2>Binary disruptions 101</h2>
+						<img align="left" width="1800" src="figures/example_disruption_end2.png">
 				</section>
 
 
 					<section>
-						<h2>Population of binaries</h2>
+						<h2>Modeling binary population</h2>
 						<img src="figures/bin_range_t4.0e+06.svg" width="1100" align="left">
 						<div class="container">
 						<div class="col">
@@ -348,7 +399,7 @@
 					</section>
 
 					<section>
-					<h2>Population of binaries</h2>
+					<h2>Modeling binary population</h2>
 					<table width="100%">
   					<thead>
   					<tr>
@@ -376,9 +427,9 @@
 
 
 					<section>
-					<h2>Simulated binary disruptions:</h2>
+					<h2>Simulating binary disruptions:</h2>
 							<ul>
-								<li class=fragment> Direct 3-body integrations (AR--Chain; Mikkola&Merritt 2008).
+								<li class=fragment> Many 3-body simulations (AR--Chain; Mikkola&Merritt 2008).
 								<li class=fragment> Binary COM approaches SMBH on eccentric orbit
 								<li class=fragment> Semimajor axis  of 0.05 pc (~Inner edge of disk)
 							</ul>
@@ -387,11 +438,11 @@
 
 
 
-				<section data-transition="none">
-				<img src="figures/2d_hist_archain_Thermal_Rebound_Init_test.svg" width="1800" align="left">
+				<section data-transition="none"><h2>Results: Bound stars</h2>
+				<img src="figures/2d_hist_archain_Thermal_Rebound_Init_test.svg" width="1600" align="left">
 				</section>
 
-				<section data-transition="none">
+				<!-- <section data-transition="none">
 				<h2>Resonant relaxation</h2>
 				<ul>
 					<li> Rauch&Tremaine 1996, Perets et al 2009, Merritt et al 2011, Antonini&Merritt 2013, Bar-Or&Fouvry 2018
@@ -403,34 +454,72 @@
 					<li class=fragment><b>Must be effective over $<10$ Myr lifetimes.</b>
 
 				</ul>
+				</section> -->
+
+				<section>
+				<h2>Relaxation</h2>
+					<div class=container>
+					<div class="col" >
+						<figure  class=figb align="left" >
+							<img src=figures/nr_vis.png height=630>
+						<figcaption>Non-resonant relaxation</figcaption>
+						</figure>
+					</div>
+
+					<div class="col">
+						<figure  class=figb >
+							<img src=figures/rr_vis_red3.png>
+							<figcaption>Resonant relaxation: Rauch&Tremaine 1996, Perets et al 2009, Merritt et al 2011, Antonini&Merritt 2013, Bar-Or&Fouvry 2018</figcaption>
+						</figure>
+					</div>
+
+					</div>
+					<br/>
+					<ul>
+						<li class=fragment><b>Must be effective over $<10$ Myr lifetimes.</b>
+					</ul>
 				</section>
 
-				<section data-transition="none">
-				<h2>Galactic Center Density</h2>
+				<section data-transition="none"><h2>Black holes dominate relaxation!</h2>
+				<div class=container>
+					<div class=col>
+						<figure class=figb align="left">
+							<img src=figures/X-Ray-Binary-Stars-at-the-Galactic-Center.jpg>
+							<figcaption>Hailey et al 2018</figcaption>
+						</figure>
+					</div>
+					<div class=col>
+						<ul>
+							<li class=fragment>$\sim 10^3$ BHs in central 0.1 pc
+							<li class=fragment>Mass segregation (e.g. Morris 1993) or In-situ (Generozov et al 2018)
+							<li class=fragment>$m_{\rm bh}(r)=2.4\times 10^4 \left(\frac{r}{0.1 {\rm pc}}\right) M_{\odot}$ (Antonini&Merritt 2013)
+						</ul>
+					</div>
+				</div>
+				<!-- <h2>Galactic Center density</h2>
 				<ul>
 					<li> $m_{\rm bh}(r)=2.4\times 10^4 \left(\frac{r}{0.1 {\rm pc}}\right) M_{\odot}$ (Antonini&Merritt 2013)
 					<li> $\sim 10^3$ BHs in central 0.1 pc mass segregation (e.g. Morris 1993) or in-situ formation in disk (Generozov et al 2018)
-				</ul>
+				</ul> -->
 				</section>
 
 
-				<section><h2>Diffusion coefficient(s)</h2>
+				<section data-transition="none"><h2>Diffusion coefficients</h2>
+				<img src="figures/diff_coeff_b.svg" width="1600" align="left">
+				</section>
+
+				<!-- <section><h2>Diffusion equation [POSSIBLY REMOVE]</h2>
 				<ul>
-					<li> Use formalism from Bar-Or&Fouvry 2018
 					<li>$\frac{\partial P}{\partial t} =\frac{1}{2} \frac{\partial}{\partial j}\left[j D_{jj} \frac{\partial}{\partial j}\left[\frac{P}{j}\right]\right]$
 				</ul>
 
-				</section>
+				</section> -->
 
 
-				<section data-transition="none">
-				<img src="figures/diff_coeff_b.svg" width="1800" align="left">
-				</section>
-
-
-				<section>
+				<section><h2>Eccentricity evolution</h2>
 							<div style="width=1800; height=100%; float: left;">
-								<video id=myVideo2 width=1800 muted controls><source src="figures/rr.webm" type="video/webm" >
+								<div id='player'>
+								<video id=myVideo2 width=1600 controls><source src="figures/rr.webm" type="video/webm" >
 								<script>
 														var pausing_function2 = function(){
 																if(this.currentTime >= 1.7) {
@@ -443,6 +532,13 @@
 														vid2.addEventListener("timeupdate", pausing_function2);
 								</script>
 								</video>
+								<!-- <div id='controls'>
+									<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+									<button id='btnReplay' class='replay' title='replay' accesskey="R" onclick='replayVideo();'>Replay</button>
+									<button id='btnPlayPause' class='play' title='play' accesskey="P" onclick='playPauseVideo();'>Play</button>
+									<button id='btnStop' class='stop' title='stop' accesskey="X" onclick='stopVideo();'>Stop</button>
+								</div> -->
+								</div>
 							</div>
 							<div class="container">
 							<div class="col">
@@ -458,9 +554,9 @@
 
 
 				<section>
-					<h2>Mass function discrepancy (Generozov 2021)</h2>
+					<h2>S-star masses (Generozov 2021)</h2>
 					<ul>
-						<li class=fragment>Sampling/mass ratio effect
+						<li class=fragment>Sampling/Unequal mass binaries
 						<!-- <li class=fragment>See Sari et al 2010 -->
 					</ul>
 					<img class=fragment src="figures/mass_ratio_1.svg"  style="position:absolute;top:50;left:0;" width="1000" />
@@ -475,9 +571,9 @@
 
 				</section>
 
-				<section data-transition="none">
+				<section data-transition="none"><h2>Probability of no massive S-stars</h2>
 
-					<img src="figures/posteriorMarg.svg" width="1800" align="left" />
+					<img src="figures/posteriorMarg.svg" width="1600" align="left" />
 				</section>
 
 
@@ -485,9 +581,6 @@
 				<section><h2>Returning to ejected stars</h2>
 					<ul>
 						<li class=fragment>Propagate ejected stars through Galactic potential
-						<li class=fragment>Scatter in disruption orbits-->Scatter in $\mathbf{v}$
-						<!-- <li class=fragment>Impulsive ejection event... -->
-						<li class=fragment>$v_{\rm ej}\approx \left(\frac{M_{\rm bh}}{m_{\rm bin}}\right)^{1/6} v_{\rm bin}$
 					</ul>
 				</section>
 				<!------------------------------------------------------------------------------>
@@ -531,27 +624,27 @@
 				<section>
 					<h2>Possible explanations?</h2>
 					<ul>
-						<li class=fragment>Repeated encounters?
+						<li class=fragment>Binary population?
+						<li class=fragment>Disruption process [Repeated encounters?]
 						<li class=fragment>Different origin?
 						<li class=fragment>Observational bias?
-						<li class=fragment>Binary population?
 					</ul>
 				</section>
 
 				<section>
 					<h2>Possible explanations?</h2>
 					<ul>
-						<li><strike>Repeated encounters?</strike>
+						<li>Binary population?
+						<li><strike>Disruption process [Repeated encounters?]</strike>
 						<li>Different origin?
 						<li>Observational bias?
-						<li>Binary population?
 					</ul>
 				</section>
 
-				<section><h2>Details (Generozov&Perets 2022)</h2>
+				<section><h2>Repeated encounters (Generozov&Perets 2022)</h2>
 					<ul>
 						<li class=fragment>Binaries-->disrupting orbits
-						<li class=fragment>Empirical distributions for binary q, sma, e (Moe+2017)
+						<li class=fragment>Empirical distributions for binary properties (Moe+2017)
 					</ul>
 				</section>
 
@@ -575,17 +668,30 @@
 					<ul>
 						<li class=fragment> Cloud disruption can explain young disc in Galactic center.
 						<li class=fragment> S stars produced by binary disruptions.
+						<img class=fragment src=figures/bh_cut_4.png />
+						<li class=fragment> S star eccentricities can be explained with black holes (see also
+							Antonini&Merritt2013, Tep et al 2021)
 						<li class=fragment> Mass and velocity of initial cloud can be constrained.
-						<li class=fragment> Disruption also produce clustered ejected stars
-						<li class=fragment> HVS velocity distribution: tension
+
+						<li class=fragment> Predicted anisotropy of ejected stars.
+						<li class=fragment> Hypervelocity star velocities: Tension
 							between theory and observations...
 					</ul>
 				</section>
 
 				<!------------------------------------------------------------------------------>
 
+				<section><h2>[INCLINATION DISTRIBUTION]</h2>
+					<img src="figures/inclination_cloud_1_hres_plot.png" width="1000" align="left">
+				</section>
 
-				<section><h2>Dependence on background density profile</h2>
+				<section><h2>[INCLINATION DISTRIBUTION]</h2>
+					<img src="figures/inclination_cloud_1_hres_cumul_plot.png" width="1000" align="left">
+				</section>
+
+
+
+				<section><h2>Dependence on background density profile [PARTIAL TESTS ON DENSITY PROFILE IN LOW RESOLTION NBODY SIMS--Results are insensitive...]</h2>
 					<ul>
 						<li class=fragment> Steady-state density profile is steeper
 						<li class=fragment> $r^{-1.5}-r^{-1.75}$ for low mass stars
@@ -680,6 +786,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="buttons.js"></script>
 
 		<script>
 			// More info about config & dependencies:
@@ -696,6 +803,7 @@
 				maxScale: 1.5,
 				history: true,
 				transition: 'none',
+				progress:false,
 				math: {
 					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
 					config: 'TeX-AMS_HTML-full'
