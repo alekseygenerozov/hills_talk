@@ -61,6 +61,7 @@
 	    display: flex;
 	   	margin: 100px;
 	   	flex-wrap: wrap;
+		height: auto;
 
 		}
 		.col{
@@ -134,7 +135,7 @@
 			<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
 			<div class="slides">
 				<section>
-					<h1>From the Galactic Center to stellar multiples: Fundamental problems in physics and astrophysics </h1>
+					<h1>What can we learn from the young stars in the Galactic Center?</h1>
 					<h2>Aleksey Generozov</h2>
 					<h3>Technion - Israel Institute of Technology</h3>
 					<img align="left" src="figures/logo1.png" />
@@ -195,7 +196,7 @@
 							<!-- </div> -->
 							<div class="col"  style="position:relative; left:40px;">
 							<ul>
-								<li>Visualization of stellar orbits in central pc (=distance from Sun to closest star)</li>
+								<li>Visualization of stellar orbits in central pc</li>
 								<!-- <li class=fragment><text class=cite>Perets+2007</text>: Binaries scattered from
 									>1 pc distances
 								<li class=fragment><text class=cite>Madigan+2009*</text>: Binary disruptions
@@ -286,222 +287,13 @@
 				</section>
 
 
-				<section>
-					<h2>Disk Scenario</h2>
-					<!-- <div class="container">
-						<div class="col">
-						<ul>
-							<li class=fragment>Similar ages? <text class=cite>(Habibi+2017)</text>
-							<li class=fragment>S5-HVS1? (~1700 km s$^{-1}$ velocity;<br><text class=cite>Koposov+2020</text>)
-							<li class=fragment><p style="color:red">Different masses...</style>
-						</ul>
-				    </div> -->
-
-
-						<div class="col" >
-						<div  class="fragment step-fade-in-then-out" style="position:absolute;top:50;left:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
-								<figure class=figt>
-									<video id="myVideo" width=1000 muted controls align=right>
-									<source src="figures/disk1.webm" type="video/webm">
-									<script>
-															var pausing_function = function(){
-															    if(this.currentTime >= 2) {
-															        this.pause();
-															        // remove the event listener after you paused the playback
-															        this.removeEventListener("timeupdate",pausing_function);
-															    }
-															};
-															var vid = document.getElementById("myVideo");
-															vid.addEventListener("timeupdate", pausing_function);
-									</script>
-									</video>
-								<figcaption font-size=50>
-									N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
-								</figcaption>
-								</figure>
-						</div>
-						<div  class=fragment style="position:absolute;top:50;left:0; background=black; text-align: left;" title="REBOUND Simulation; Rein&Liu 2012">
-							<figure class=figt>
-							<video width=1000 muted controls><source data-src="figures/disk1.webm" type="video/webm"></video>
-							<figcaption font-size=50>
-								N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
-							</figcaption>
-							</figure>
-						</div>
-						</div>
-				</section>
-
-				<section>
-					<h2>Disc formation: Molecular cloud disruption</h2>
-					<div class=container>
-					<img src=figures/gnm21_vis_a.png />
-					<ul>
-						<li class=fragment>Previous work: Eccentric disc, but no extreme eccentricities<br/>
-						<text class=cite>(Bonell&Rice 2008, Gualandris et 2012)</text>
-						<li class=fragment>Try to find conditions that work <br/>
-						<text class=cite><text style="font-weight:bold;">Generozov</text>, Nayakshin, and Madigan 2022</text>
-						<!-- <text class=cite><em>Generozov</em>, Nayakshin, and Madigan 2022</text> -->
-					</ul>
-					</div>
-				</section>
-
-				<!-- <section>
-					<h2>Simulation setup</h2>
-					<img width=1700 src="figures/simulation_schematic.svg" align=left >
-				</section>
-
-				<section>
-					<h2>Simulation setup</h2>
-					<img width=1700 src="figures/simulation_schematic_b.svg" align=left >
-				</section> -->
-
-				<section>
-					<h2>Simulation setup</h2>
-					<img width=1700 src="figures/simulation_schematic_c.svg" align=left >
-				</section>
-
-				<section>
-					<h2>Simulation setup</h2>
-					<ul>
-						<li class=fragment>Hydrodynamic simulations 
-							<!-- <text class=cite>Springel 2005</text> -->
-						<li class=fragment>400K particles
-						<li class=fragment>Cooling/Star formation (sink particles)
-					</ul>
-				</section>
-
-				<section>
-					<h2>Simulation setup: Background density</h2>
-
-					<div class=container>
-					<div class=col>
-						<img src="figures/prec_schematic_new.png" width="1000" align="left">
-					</div>
-					<div class=col style="position:relative; left:40px;">
-						<ul>
-							<li class=fragment>Controls precession!
-							<li class=fragment>Assume fixed $r^{-1.16}$ density <text class=cite>(Schodel+2018)</text>
-							<li class=fragment>$1.2\times 10^6 M_{\odot}$ --stellar mass inside central pc.
-						</ul>
-					</div>
-					</div>
-				</section>
-
-
-				<section>
-					<h2>Evolution of disrupted cloud</h2>
-					<div class="container">
-
-						<video  width=1100 height=100% muted controls><source data-src="figures/movie-cloud1-R05-snap2.mp4" type="video/mp4" /></video>
-
-						<div class="col" style="position:relative; left:40px;">
-							<ul>
-								<li>~0.5 pc (12'') across
-								<li>~$10^5-2\times10^5$ yr
-							</ul>
-						</div>
-					</div>
-				</section>
-
-<!-- Make this section shorter! Just mention counter-rotating populations -->
-				<!-- <section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_gas_0.0.svg" width="1800" align="left">
-				</section>
-
-				<section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_gas_400.0.svg" width="1800" align="left">
-				</section>
-
-				<section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_gas_1470.0.svg" width="1800" align="left">
-				</section>
-
-				<section><h2>Angular momentum distribution of the disc</h2>
-					<img src="figures/lz_all_1470.0.svg" width="1800" align="left">
-				</section> -->
-
-				<!-- <section><h2>Gas <span>&#8594;</span>  N-body </h2> -->
-				<section><h2>Evolution of disrupted cloud (N-body)</h2>
-					<div>
-						   <img width=900 data-src="figures/surf_density.png" align="left"/>
-					</div>
-					<div style>
-							<video  muted controls width=1000 align=right><source data-src="figures/sim_movie_man_v2.webm" type="video/webm" /></video>
-					</div>
-				</section>
-
-				<section><h2> Observational comparison: Eccentricity </h2>
-					<img src="figures/e_if1.svg" width="1800" align="left">
-				</section>
-
-				<section><h2> Observational comparison: Eccentricity </h2>
-					<img src="figures/e_if1_cut.svg" width="1800" align="left">
-				</section>
-
-
-				<section><h2> Observational comparison: Surface density </h2>
-					<img src="figures/surf_dens_obs_scale.svg" width="1800" align="left">
-				</section>
-
-				<!-- <section><h2>Caveats</h2>
-					<ul>
-						<li class=fragment>Initial conditions
-						<li class=fragment>Gas at late times
-						<li class=fragment>Fixed background density
-						<li class=fragment>No mass function
-					</ul>
-				</section> -->
-
-				<section><h2>Stellar disk produces binary disruptions</h2>
-					<ul>
-						<li class=fragment>'Disruption'=Passing within $3\times 10^{-4}$ pc of SMBH
-						<li class=fragment>Tidal radius of $20 M_{\odot}, 1$ AU Binary
-					</ul>
-				</section>
-<!--
-				<section><h2>Disruptions: Time distribution</h2>
-					<img align="left" width="1800" src="figures/dist1_a.svg">
-				</section>
-
-				<section><h2>Disruptions: Time distribution</h2>
-					<img align="left" width="1800" src="figures/dist1_c.svg">
-				</section>
- -->
-				<section><h2>Disruption times</h2>
-					<img align="left" width="1800" src="figures/dist1_d.svg">
-				</section>
-
-
-				<section><h2>Disruptions: Angular distribution </h2>
-					<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
-				</section>
-
-
-				<!-- <section>
-					<h2>Hypervelocity stars </h2>
-					<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
-				</section> -->
-
-				<section data-transition="none">
-					<h2>Hypervelocity star implications <text class=cite>(<text style="font-weight:bold;">Generozov</text> 2020)</text></h2>
-					<img src="figures/hvs_stream_contour_corr_no_leg.svg" width="1800" align="left">
-				</section>
-
-
-
-				<section>
-					<h2>Difficult to explain all S-stars with disc </h2>
-					<ul>
-						<li>Masses of S-Stars (But see Generozov 2021)</li>
-						<li>Orbital distributions of S-stars</li>
-					</ul>
-				</section>
 
 
 					<section>
-						<h2>Go to isotropic model </h2>
+						<h2>Continuous injection model</h2>
 						<ul>
-							<li>Binaries are continuously, isotropically  injected in the Galactic Center </li>
+							<li>arXiv: 2412.02752 (with Perets, MPE group, and Schödel)</li>
+							<li class=fragment>Binaries are continuously, isotropically  injected in the Galactic Center </li>
 							<li class=fragment> Binary COM approaches SMBH on parabolic orbit
 							<!-- <li class="fragment">Uniform pericenter </li>
 							<img width="400" class="fragment" src="figures/target3.svg"/>
@@ -517,7 +309,7 @@
 
 
 				<section>
-					<h2>Go to isotropic model </h2>
+					<h2>Continuous injection model</h2>
 					<ul>
 	
 						<li class="fragment">Uniform pericenter </li>
@@ -645,14 +437,15 @@
 				</ul> -->
 				</section>
 
+				<section data-transition="none">
+					<h2>Modeling summary</h2>		
+					<img height=900 src="figures/flow.png"/>
+				</section>
 
-				<section data-transition="none"><h2>Diffusion equation</h2>
-					<!-- $\frac{\partial P}{\partial t} = \frac{1}{2} \frac{\partial}{\partial j}$ -->
-					<p  style="text-align: left; font-size: 200%;" class="equation large">
-					$\frac{\partial P}{\partial t} = \frac{1}{2} \frac{\partial}{\partial j} \left[j D_{jj} \frac{\partial}{\partial j} \left[\frac{P}{j}\right]\right]$</p> 
-					<!-- <p style="text-align: left; font-size: 150%;" class="equation large">
-						$\Delta j = D_{\rm j,NRR} \Delta t + \gamma_1 \sqrt{D_{\rm jj,NRR} \Delta t}$</p> -->
-				
+
+				<section data-transition="none">
+					<h2>Modeling summary</h2>
+					<img height=900 src="figures/flow2.png" />
 				</section>
 
 
@@ -662,34 +455,315 @@
 					</div>
 				</section>
 
-<!-- 
-				<section><h2>Evolution</h2>
-					<div style="text-align:left">
-						<video align="left" width="1600" muted controls><source data-src="figures/za_vis.webm" type="video/webm" /></video>
-					</div>
-				</section> -->
 
-				<section>
-					<h2>Observational comparison: Eccentricity</h2>
-					<div style="text-align:left">
-						<img src="figures/ecc_compare_bf_rr2_ulgwa_lcnew.svg" width="2000" align="left">
+				<section><h2>Observation comparison: Eccentricity and pericenter</h2>
+					<div class="container">
+						<div class="col">
+							<img src="figures/ecc_compare_rr2_ulgwa_lcnew.png" height="750" align="left" display="block"/>
+						</div>
+						<div class="col" style="position:relative; left:40px;">
+							<img src="figures/rp_compare_rr2_ulgwa_lcnew.png" height="750" align="left" display="block" />
+						</div>
 					</div>
 				</section>
 
 				<section>
-					<h2>Observational comparison: Pericenter</h2>
+					<h2>Observational comparison: Bright and faint</h2>
 					<div style="text-align:left">
-						<img src="figures/rp_compare_bf_rr2_ulgwa_lcnew.svg" width="2000" align="left">
+						<img src="figures/ecc_compare_bf_rr2_ulgwa_lcnew.svg" width="1900" align="left">
+					</div>
+				</section>
+
+				<section>
+					<h2>Observational comparison: Bright and faint</h2>
+					<div style="text-align:left">
+						<img src="figures/rp_compare_bf_rr2_ulgwa_lcnew.svg" width="1900" align="left">
 					</div>
 				</section>
 
 				<section>
 					<h2>Observational comparison: Semi-major axis</h2>
 					<div style="text-align:left">
-						<img src="figures/sma_compare_bf_rr2_ulgwa_lcnew.svg" width="2000" align="left">
+						<img src="figures/sma_compare_bf_rr2_ulgwa_lcnew.svg" width="1900" align="left">
 					</div>
 				</section>
+
+				<section>
+					<h2>Observational comparison: 2D</h2>
+					<div style="text-align:left">
+						<img src="figures/za_2d_reduced.png" width="height=1000" align="left">
+					</div>
+				</section>
+
+				<section>
+					<h2>Observational comparison: 2D</h2>
+					<div style="text-align:left">
+						<img src="figures/aecorner.svg" width="height=1000" align="left">
+					</div>
+				</section>
+
+				<section>
+					<h2>Main problem: Age distribution</h2>
+					<div style="text-align:left">
+						<img src="figures/habibi_age_plot2.svg" width="height=1000" align="left">
+					</div>
+				</section>
+
+
+
+								<section>
+									<h2>Disk Scenario</h2>
+									<!-- <div class="container">
+														<div class="col">
+														<ul>
+															<li class=fragment>Similar ages? <text class=cite>(Habibi+2017)</text>
+															<li class=fragment>S5-HVS1? (~1700 km s$^{-1}$ velocity;<br><text class=cite>Koposov+2020</text>)
+															<li class=fragment><p style="color:red">Different masses...</style>
+														</ul>
+												    </div> -->
 								
+								
+									<div class="col">
+										<div class="fragment step-fade-in-then-out"
+											style="position:absolute;top:50;left:0; background=black; text-align: left;"
+											title="REBOUND Simulation; Rein&Liu 2012">
+											<figure class=figt>
+												<video id="myVideo" width=1000 muted controls align=right>
+													<source src="figures/disk1.webm" type="video/webm">
+													<script>
+														var pausing_function = function () {
+															if (this.currentTime >= 2) {
+																this.pause();
+																// remove the event listener after you paused the playback
+																this.removeEventListener("timeupdate", pausing_function);
+															}
+														};
+														var vid = document.getElementById("myVideo");
+														vid.addEventListener("timeupdate", pausing_function);
+													</script>
+												</video>
+												<figcaption font-size=50>
+													N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
+												</figcaption>
+											</figure>
+										</div>
+										<div class=fragment style="position:absolute;top:50;left:0; background=black; text-align: left;"
+											title="REBOUND Simulation; Rein&Liu 2012">
+											<figure class=figt>
+												<video width=1000 muted controls>
+													<source data-src="figures/disk1.webm" type="video/webm">
+												</video>
+												<figcaption font-size=50>
+													N-body Simulation ; REBOUND (Rein&Liu 2012), $r^{-1.5}$ density
+												</figcaption>
+											</figure>
+										</div>
+									</div>
+								</section>
+								
+								<section>
+									<h2>Disc formation: Molecular cloud disruption</h2>
+									<div class=container>
+										<img src=figures/gnm21_vis_a.png />
+										<ul>
+											<li class=fragment>Previous work: Eccentric disc, but no extreme eccentricities<br />
+												<text class=cite>(Bonell&Rice 2008, Gualandris et 2012)</text>
+											<li class=fragment>Try to find conditions that work <br />
+												<text class=cite><text style="font-weight:bold;">Generozov</text>, Nayakshin, and Madigan 2022</text>
+												<!-- <text class=cite><em>Generozov</em>, Nayakshin, and Madigan 2022</text> -->
+										</ul>
+									</div>
+								</section>
+								
+								<!-- <section>
+													<h2>Simulation setup</h2>
+													<img width=1700 src="figures/simulation_schematic.svg" align=left >
+												</section>
+								
+												<section>
+													<h2>Simulation setup</h2>
+													<img width=1700 src="figures/simulation_schematic_b.svg" align=left >
+												</section> -->
+								
+								<section>
+									<h2>Simulation setup</h2>
+									<img width=1700 src="figures/simulation_schematic_c.svg" align=left>
+								</section>
+								
+								<section>
+									<h2>Simulation setup</h2>
+									<ul>
+										<li class=fragment>Hydrodynamic simulations
+											<!-- <text class=cite>Springel 2005</text> -->
+										<li class=fragment>400K particles
+										<li class=fragment>Cooling/Star formation (sink particles)
+									</ul>
+								</section>
+								
+								<section>
+									<h2>Simulation setup: Background density</h2>
+								
+									<div class=container>
+										<div class=col>
+											<img src="figures/prec_schematic_new.png" width="1000" align="left">
+										</div>
+										<div class=col style="position:relative; left:40px;">
+											<ul>
+												<li class=fragment>Controls precession!
+												<li class=fragment>Assume fixed $r^{-1.16}$ density <text class=cite>(Schodel+2018)</text>
+												<li class=fragment>$1.2\times 10^6 M_{\odot}$ --stellar mass inside central pc.
+											</ul>
+										</div>
+									</div>
+								</section>
+								
+								
+								<section>
+									<h2>Evolution of disrupted cloud</h2>
+									<div class="container">
+								
+										<video width=1100 height=100% muted controls>
+											<source data-src="figures/movie-cloud1-R05-snap2.mp4" type="video/mp4" />
+										</video>
+								
+										<div class="col" style="position:relative; left:40px;">
+											<ul>
+												<li>~0.5 pc (12'') across
+												<li>~$10^5-2\times10^5$ yr
+											</ul>
+										</div>
+									</div>
+								</section>
+								
+								<!-- Make this section shorter! Just mention counter-rotating populations -->
+								<!-- <section><h2>Angular momentum distribution of the disc</h2>
+													<img src="figures/lz_gas_0.0.svg" width="1800" align="left">
+												</section>
+								
+												<section><h2>Angular momentum distribution of the disc</h2>
+													<img src="figures/lz_gas_400.0.svg" width="1800" align="left">
+												</section>
+								
+												<section><h2>Angular momentum distribution of the disc</h2>
+													<img src="figures/lz_gas_1470.0.svg" width="1800" align="left">
+												</section>
+								
+												<section><h2>Angular momentum distribution of the disc</h2>
+													<img src="figures/lz_all_1470.0.svg" width="1800" align="left">
+												</section> -->
+								
+								<!-- <section><h2>Gas <span>&#8594;</span>  N-body </h2> -->
+								<section>
+									<h2>Evolution of disrupted cloud (N-body)</h2>
+									<div>
+										<img width=900 data-src="figures/surf_density.png" align="left" />
+									</div>
+									<div style>
+										<video muted controls width=1000 align=right>
+											<source data-src="figures/sim_movie_man_v2.webm" type="video/webm" />
+										</video>
+									</div>
+								</section>
+								
+								<section>
+									<h2> Observational comparison: Eccentricity </h2>
+									<img src="figures/e_if1.svg" width="1800" align="left">
+								</section>
+								
+								<section>
+									<h2> Observational comparison: Eccentricity </h2>
+									<img src="figures/e_if1_cut.svg" width="1800" align="left">
+								</section>
+								
+								
+								<section>
+									<h2> Observational comparison: Surface density </h2>
+									<img src="figures/surf_dens_obs_scale.svg" width="1800" align="left">
+								</section>
+								
+								<!-- <section><h2>Caveats</h2>
+													<ul>
+														<li class=fragment>Initial conditions
+														<li class=fragment>Gas at late times
+														<li class=fragment>Fixed background density
+														<li class=fragment>No mass function
+													</ul>
+												</section> -->
+								
+								<section>
+									<h2>Stellar disk produces binary disruptions</h2>
+									<ul>
+										<li class=fragment>'Disruption'=Passing within $3\times 10^{-4}$ pc of SMBH
+										<li class=fragment>Tidal radius of $20 M_{\odot}, 1$ AU Binary
+									</ul>
+								</section>
+								<!--
+												<section><h2>Disruptions: Time distribution</h2>
+													<img align="left" width="1800" src="figures/dist1_a.svg">
+												</section>
+								
+												<section><h2>Disruptions: Time distribution</h2>
+													<img align="left" width="1800" src="figures/dist1_c.svg">
+												</section>
+								 -->
+								<section>
+									<h2>Disruption times</h2>
+									<img align="left" width="1800" src="figures/dist1_d.svg">
+								</section>
+								
+								
+								<section>
+									<h2>Disruptions: Angular distribution </h2>
+									<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
+								</section>
+								
+								
+								<!-- <section>
+													<h2>Hypervelocity stars </h2>
+													<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
+												</section> -->
+								
+								<section data-transition="none">
+									<h2>Hypervelocity star implications <text class=cite>(<text style="font-weight:bold;">Generozov</text> 2020)</text>
+									</h2>
+									<img src="figures/hvs_stream_contour_corr_no_leg.svg" width="1800" align="left">
+								</section>
+								
+								
+								
+								<section>
+									<h2>Difficult to explain all S-stars with disc </h2>
+									<ul>
+										<li>Masses of S-Stars (But see Generozov 2021)</li>
+										<li>Orbital distributions of S-stars</li>
+										<li>Steep BH cusp may suppress instability</li>
+									</ul>
+								</section>
+
+<!-- 							
+							<section>
+								<h2>Towards direct detection of the 'dark cusp'</h2>
+								<div class="container">
+							
+									<img src="figures/s2_trajectory_animation.gif" height="900">
+							
+									<div class="col" style="position:relative; left:40px;">
+										<ul>
+											<li>Simulation of S2 and BH swarm
+										</ul>
+									</div>
+								</div>
+							</section> -->
+
+
+							<section>
+								<h2>Towards direct detection of the 'dark cusp'</h2>
+								
+								<ul>
+									<li>In collaboration with: M.S. Bordoni and R. Capuzzo-Dolcetta </li>
+								</ul>
+							</section>
+
 
 				<section><h2>Towards direct detection of the 'dark cusp'</h2>
 						<div class="container">
@@ -698,17 +772,31 @@
 						
 							<div class="col" style="position:relative; left:40px;">
 								<ul>
-									<li>Simulation of S2 and BH swarm
+									<li>Simulation of S2 and BH swarm (AR-CHAIN; <text class="cite">Mikkola&Tanikawa 1999</text>)
 								</ul>
 							</div>
 						</div>
 				</section>
+<!-- 
+				<section>
+					<h2>Towards direct detection of the 'dark cusp'</h2>
+					<div class="container">
+				
+						<img src="figures/out_plane_matteo.png" height="900">
+				
+						<div class="col" style="position:relative; left:40px;">
+							<ul>
+								<li> Precession of orbital plane </li>
+							</ul>
+						</div>
+					</div>
+				</section> -->
 
 				<section>
 					<h2>Towards direct detection of the 'dark cusp'</h2>
 					<div class="container">
 				
-						<img src="figures/matteo_violin_clean.png" height="900">
+						<img src="figures/yres_violin_plot_t2026.35.svg" height="900">
 				
 						<div class="col" style="position:relative; left:40px;">
 							<ul>
@@ -727,6 +815,15 @@
 						<li class="fragment">Have to understand perturbations for spin measurements.</li>
 						<li class="fragment">Preview for LISA (2032-2034).</li>
 						<img class="fragment" src="figures/emri.png" height="700"/>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Conclusions</h2>
+					<ul>
+						<li class="fragment">Binary disruptions can reproduce orbital distributions of young stars in Galactic Center</li>
+						<li class="fragment">Tensions remain (e.g. ages)</li>
+						<li class="fragment">Dynamical detection of BH cusp within reach</li>
 					</ul>
 				</section>
 
