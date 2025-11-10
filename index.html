@@ -21,8 +21,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
-
+		<meta name="referrer" content="origin" />
 
 
 		<style type="text/css">
@@ -137,26 +136,37 @@
 				<section>
 					<h1>What can we learn from the young stars in the Galactic Center?</h1>
 					<h2>Aleksey Generozov</h2>
-					<h3>Technion - Israel Institute of Technology</h3>
-					<img align="left" src="figures/logo1.png" />
-					<img align="right" src="figures/logo2.png" />
+					<!-- <h3>Technion - Israel Institute of Technology</h3> -->
+					<!-- <img align="left" src="figures/logo1.png" />
+					<img align="right" src="figures/logo2.png" /> -->
 
-					<!-- <h3 class=fragment>Collaborators: Ann-Marie Madigan, Sergei Nayakshin, Hagai Perets
-					</h3> -->
+					<h3 class=fragment>Collaborators: Ann-Marie Madigan, Sergei Nayakshin, Hagai Perets, MPE Group,...
+					</h3>
 				</section>
 
 				
 
 				<section>
 					<h2>Journey to the Galactic Center</h2>
-					<iframe width="1600" height="945" align="left" src="https://www.youtube-nocookie.com/embed/DRCD-zx5QFA?si=CbFjD1zdu-a8IObv"
+					<iframe  width="1600" height="945" align="left" data-src="https://www.youtube-nocookie.com/embed/DRCD-zx5QFA?si=CbFjD1zdu-a8IObv"
 						title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						 referrerpolicy='strict-origin-when-cross-origin'></iframe>
 
 					
 		
 				</section>
+
+				<!-- <section>
+					<h2>Journey to the Galactic Center</h2>
+					<iframe  width="1600" height="945" align="left" data-src="https://www.youtube.com/embed/DRCD-zx5QFA?si=CbFjD1zdu-a8IObv"
+						title="YouTube video player" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen
+						 referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>
+
+					
+		
+				</section> -->
+
 
 
 				<section><h2>The Galactic Center is a natural lab</h2>
@@ -172,14 +182,14 @@
 							</figure>
 							</div>
 						</div>
-						<div class=col>
+						<!-- <div class=col>
 							<div class=fragment>
 								<figure class=figb class=fragment align="left">
 									<img height="550" src=figures/smbh_growth_annot.svg style="position:relative;bottom:0" />
 									<figcaption> <text class=cite>NASA/JPL-Caltech</text></figcaption>
 								</figure>
 							</div>
-						</div>
+						</div> -->
 
 					</div>
 				</section>
@@ -287,12 +297,11 @@
 				</section>
 
 
-
-
 					<section>
 						<h2>Continuous injection model</h2>
 						<ul>
-							<li>arXiv: 2412.02752 (with Perets, MPE group, and Schödel)</li>
+							<!-- <li>arXiv: 2412.02752 (with Perets, MPE group, and Schödel)</li> -->
+							<li>Generozov et al 2025 (with Perets, MPE group, and Schödel)</li>
 							<li class=fragment>Binaries are continuously, isotropically  injected in the Galactic Center </li>
 							<li class=fragment> Binary COM approaches SMBH on parabolic orbit
 							<!-- <li class="fragment">Uniform pericenter </li>
@@ -445,7 +454,7 @@
 
 				<section data-transition="none">
 					<h2>Modeling summary</h2>
-					<img height=900 src="figures/flow2.png" />
+					<img height=900 src="figures/flow2_revised.png" />
 				</section>
 
 
@@ -488,7 +497,7 @@
 					</div>
 				</section>
 
-				<section>
+				<!-- <section>
 					<h2>Observational comparison: 2D</h2>
 					<div style="text-align:left">
 						<img src="figures/za_2d_reduced.png" width="height=1000" align="left">
@@ -500,7 +509,7 @@
 					<div style="text-align:left">
 						<img src="figures/aecorner.svg" width="height=1000" align="left">
 					</div>
-				</section>
+				</section> -->
 
 				<section>
 					<h2>Main problem: Age distribution</h2>
@@ -665,22 +674,7 @@
 									</div>
 								</section>
 								
-								<section>
-									<h2> Observational comparison: Eccentricity </h2>
-									<img src="figures/e_if1.svg" width="1800" align="left">
-								</section>
-								
-								<section>
-									<h2> Observational comparison: Eccentricity </h2>
-									<img src="figures/e_if1_cut.svg" width="1800" align="left">
-								</section>
-								
-								
-								<section>
-									<h2> Observational comparison: Surface density </h2>
-									<img src="figures/surf_dens_obs_scale.svg" width="1800" align="left">
-								</section>
-								
+
 								<!-- <section><h2>Caveats</h2>
 													<ul>
 														<li class=fragment>Initial conditions
@@ -709,24 +703,6 @@
 								<section>
 									<h2>Disruption times</h2>
 									<img align="left" width="1800" src="figures/dist1_d.svg">
-								</section>
-								
-								
-								<section>
-									<h2>Disruptions: Angular distribution </h2>
-									<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
-								</section>
-								
-								
-								<!-- <section>
-													<h2>Hypervelocity stars </h2>
-													<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
-												</section> -->
-								
-								<section data-transition="none">
-									<h2>Hypervelocity star implications <text class=cite>(<text style="font-weight:bold;">Generozov</text> 2020)</text>
-									</h2>
-									<img src="figures/hvs_stream_contour_corr_no_leg.svg" width="1800" align="left">
 								</section>
 								
 								
@@ -765,19 +741,19 @@
 							</section>
 
 
-				<section><h2>Towards direct detection of the 'dark cusp'</h2>
-						<div class="container">
-						
-							<img src="figures/s2_trajectory_animation.gif" height="900">
-						
-							<div class="col" style="position:relative; left:40px;">
-								<ul>
-									<li>Simulation of S2 and BH swarm (AR-CHAIN; <text class="cite">Mikkola&Tanikawa 1999</text>)
-								</ul>
-							</div>
-						</div>
-				</section>
-<!-- 
+							<section><h2>Towards direct detection of the 'dark cusp'</h2>
+								<div class="container">
+								
+									<img src="figures/s2_trajectory_animation.gif" height="900">
+								
+									<div class="col" style="position:relative; left:40px;">
+										<ul>
+											<li>Simulation of S2 and BH swarm (AR-CHAIN; <text class="cite">Mikkola&Tanikawa 1999</text>)
+										</ul>
+									</div>
+								</div>
+							</section>
+		<!-- 
 				<section>
 					<h2>Towards direct detection of the 'dark cusp'</h2>
 					<div class="container">
@@ -826,6 +802,45 @@
 						<li class="fragment">Dynamical detection of BH cusp within reach</li>
 					</ul>
 				</section>
+
+				<section>
+					<h2> Observational comparison: Eccentricity </h2>
+					<img src="figures/e_if1.svg" width="1800" align="left">
+				</section>
+				
+				<section>
+					<h2> Observational comparison: Eccentricity </h2>
+					<img src="figures/e_if1_cut.svg" width="1800" align="left">
+				</section>
+				
+				
+				<section>
+					<h2> Observational comparison: Surface density </h2>
+					<img src="figures/surf_dens_obs_scale.svg" width="1800" align="left">
+				</section>
+				
+
+				<section>
+					<h2>Disruptions: Angular distribution </h2>
+					<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
+				</section>
+
+
+				
+				
+				<!-- <section>
+									<h2>Hypervelocity stars </h2>
+									<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
+								</section> -->
+				
+				<section data-transition="none">
+					<h2>Hypervelocity star implications <text class=cite>(<text style="font-weight:bold;">Generozov</text> 2020)</text>
+					</h2>
+					<img src="figures/hvs_stream_contour_corr_no_leg.svg" width="1800" align="left">
+				</section>
+								
+
+
 
 				<section>
 					<h2>Now for something completely different...</h2>
