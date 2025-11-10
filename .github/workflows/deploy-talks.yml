@@ -22,13 +22,13 @@ jobs:
       # e.g. npm install && npm run build
       - name: Prepare build output
         run: |
-          mkdir -p build
-          cp -r !("build") build/
+              TMPDIR=$(mktemp -d)
+              cp -r * "$TMPDIR/"
 
       - name: Deploy to gh-pages subfolder
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./build
+          publish_dir: $TMPDIR
           destination_dir: ${{ github.ref_name }}  # e.g. "talk-2024"
