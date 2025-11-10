@@ -23,7 +23,7 @@ jobs:
       - name: Prepare build output
         run: |
           mkdir -p build
-          cp -r * build/
+          cp -r !("build") build/
 
       - name: Deploy to gh-pages subfolder
         uses: peaceiris/actions-gh-pages@v3
