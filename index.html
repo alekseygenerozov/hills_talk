@@ -10,6 +10,7 @@
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -243,7 +244,6 @@
 			</section>
 
 
-
 			<section>
 				<h2>Journey to the Galactic Center</h2>
 				<iframe width="1600" height="945" align="left"
@@ -290,6 +290,12 @@
 								<li class="fragment">Measured: precession</li>
 								<li class="fragment">Future: spin</li>
 							</ul>
+							<li class="fragment">Scale:
+								<ul>
+									<li>Black orbit ~ 0.01 pc</li>
+									<li>1 pc = $3.1 \times 10^{16}$ m</li>
+								</ul>
+							</li>
 							<!-- <li class="fragment"><b>Astrophysics:</b></li>
 							<ul>
 								<li class="fragment">Star formation</li>
@@ -316,7 +322,7 @@
 
 
 			<section>
-				<h2>Star's are interesting in their own right</h2>
+				<h2>Stars are interesting in their own right</h2>
 
 				<div class="container">
 					<!-- <div class=col 	> -->
@@ -366,6 +372,17 @@
 
 			</section>
 
+			<section>
+				<h2> Key questions</h2>
+				<ul>
+					<li>How do we explain the paradox of youth?</li>
+					<li>What can the close stars tell up about the immediate vicinity of
+						the SMBH?
+					</li>
+				</ul>
+			</section>
+
+
 
 			<section>
 				<h2>Binary disruptions can solve the paradox</h2>
@@ -384,6 +401,20 @@
 					</div>
 				</div>
 
+			</section>
+
+
+
+			<section>
+				<h2>Tides 101</h2>
+				<div class=cotainer align="left">
+					<div class=col>
+						<figure class="figb4">
+							<img src="figures/tide-generating-force.gif" height="800" />
+							<figcaption><text class="cite">NASA/Vi Nguyen</text></figcaption>
+						</figure>
+					</div>
+				</div>
 			</section>
 
 			<section>
@@ -415,49 +446,146 @@
 
 					<div class="col" style="position:relative; left:40px;">
 						<ul>
-							<li>Unbound star</li>
 							<li>e.g. S5-HVS1 ejected from GC 5 Myr ago</li>
+							<li class="fragment">1800 km/s $\approx$ 8 times faster than Sun</li>
+							<li class="fragment">Unbound star</li>
 						</ul>
 					</div>
 				</div>
 
 			</section>
 
+			<!-- <section>Can we reproduce the S-stars with continuously disrupting binaries?</section> -->
 
-			<section>
-				<h2>Continuous injection model</h2>
-				<ul>
-					<!-- <li>arXiv: 2412.02752 (with Perets, MPE group, and Schödel)</li> -->
-					<li>Generozov et al 2025 (with Perets, MPE group, and Schödel)</li>
-					<li class=fragment>Binaries are continuously, isotropically injected in the Galactic Center </li>
-					<!-- <li class=fragment> Binary COM approaches SMBH on parabolic orbit -->
-					<!-- <li class="fragment">Uniform pericenter </li>
-							<img width="400" class="fragment" src="figures/target3.svg"/>
-							<li class="fragment">Observationally motivated binary population <text class=cite>(Moe and Di Stefano 2017)</text></li>
-							<li class=fragment> Many 3-body simulations (Fewbody; <text class=cite>Fregeau 2004</text>). -->
-				</ul>
-			</section>
-
-
-			<!-- <section>
-					<h2>Reproducing the S-star orbits <br/>	<text class=cite><text style="font-weight:bold;">Generozov</text>&Madigan 2020</text></h2>
-				</section> -->
 
 
 			<section>
-				<h2>Continuous injection model</h2>
-				<ul>
+				<h2>Can we reproduce the S-stars with continuously disrupting binaries?</h2>
+				<div style="display: flex; align-items: center; justify-content: space-between;">
 
-					<li class="fragment">Uniform pericenter </li>
-					<img width="400" class="fragment" src="figures/target3.svg" />
-					<li class="fragment">Observationally motivated binary population <text class=cite>(Moe and Di
-							Stefano 2017)</text></li>
-					<li class=fragment> Many 3-body simulations (Fewbody; <text class=cite>Fregeau 2004</text>)
-						<!-- <li class=fragment>Work closely with the MPE group for 
-							observational comparison
-						</li> -->
-				</ul>
+					<div style="width: 45%; text-align: left; font-size: 0.9em;">
+						<ul>
+							<li><text class="cite">Generozov et al 2025</text> (with MPE group...)</li>
+							<li class="fragment">Uniform close approach</li>
+							<li class="fragment">Observationally motivated binary population <text class=cite>(Moe and
+									Di
+									Stefano 2017)</text></li>
+							<li class=fragment> Many 3-body simulations (Fewbody; <text class=cite>Fregeau 2004</text>)
+							</li>
+
+						</ul>
+					</div>
+
+					<div style="width: 50%;">
+						<svg viewBox="0 0 400 300"
+							style="background: #0b1120; border-radius: 10px; border: 1px solid #333;">
+
+							<circle cx="200" cy="150" r="20" fill="none" stroke="rgba(255,255,255,0.4)"
+								stroke-dasharray="4 4" />
+							<circle cx="200" cy="150" r="90" fill="none" stroke="rgba(255,255,255,0.05)" />
+
+							<circle cx="200" cy="150" r="6" fill="black" stroke="#ff8c00" stroke-width="2"
+								style="filter: drop-shadow(0 0 8px #ff8c00);" />
+
+							<g transform="rotate(0 200 150)">
+								<g>
+									<animateMotion path="M 20,50 Q 100,100 180,150" dur="24s" keyTimes="0; 0.166; 1"
+										keyPoints="0; 1; 1" calcMode="linear" repeatCount="indefinite" />
+									<animate attributeName="opacity" values="1; 1; 0; 0" keyTimes="0; 0.166; 0.167; 1"
+										dur="24s" repeatCount="indefinite" />
+									<g>
+										<animateTransform attributeName="transform" type="rotate" values="0; 1440; 1440"
+											keyTimes="0; 0.166; 1" dur="24s" repeatCount="indefinite" />
+										<circle cx="-6" cy="0" r="4" fill="#4facfe" />
+										<circle cx="6" cy="0" r="4" fill="#f093fb" />
+									</g>
+								</g>
+								<circle cx="0" cy="0" r="4" fill="#4facfe" opacity="0">
+									<animateMotion path="M 180,150 Q 250,50 350,-20" dur="24s"
+										keyTimes="0; 0.166; 0.29; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.165; 0.166; 0.289; 0.29; 1" dur="24s" repeatCount="indefinite" />
+								</circle>
+								<circle cx="0" cy="0" r="4" fill="#f093fb" opacity="0">
+									<animateMotion path="M 180,150 A 90 35 0 1 0 360 150 A 90 35 0 1 0 180 150" dur="4s"
+										repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.165; 0.166; 0.95; 0.98; 1" dur="24s" repeatCount="indefinite" />
+								</circle>
+							</g>
+
+							<g transform="rotate(120 200 150)">
+								<g>
+									<animateMotion path="M -20,100 Q 80,130 180,150" dur="24s"
+										keyTimes="0; 0.166; 0.333; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.165; 0.166; 0.333; 0.334; 1" dur="24s"
+										repeatCount="indefinite" />
+									<g>
+										<animateTransform attributeName="transform" type="rotate"
+											values="0; 0; 1440; 1440" keyTimes="0; 0.166; 0.333; 1" dur="24s"
+											repeatCount="indefinite" />
+										<circle cx="-6" cy="0" r="4" fill="#00f2fe" />
+										<circle cx="6" cy="0" r="4" fill="#ff0844" />
+									</g>
+								</g>
+								<circle cx="0" cy="0" r="4" fill="#00f2fe" opacity="0">
+									<animateMotion path="M 180,150 Q 230,220 350,280" dur="24s"
+										keyTimes="0; 0.333; 0.458; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.332; 0.333; 0.457; 0.458; 1" dur="24s"
+										repeatCount="indefinite" />
+								</circle>
+								<circle cx="0" cy="0" r="4" fill="#ff0844" opacity="0">
+									<animateMotion path="M 180,150 A 65 20 0 1 0 310 150 A 65 20 0 1 0 180 150" dur="2s"
+										repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.332; 0.333; 0.95; 0.98; 1" dur="24s" repeatCount="indefinite" />
+								</circle>
+							</g>
+
+							<g transform="rotate(-110 200 150)">
+								<g>
+									<animateMotion path="M -50,180 Q 80,160 180,150" dur="24s"
+										keyTimes="0; 0.333; 0.5; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.332; 0.333; 0.5; 0.501; 1" dur="24s" repeatCount="indefinite" />
+									<g>
+										<animateTransform attributeName="transform" type="rotate"
+											values="0; 0; 1440; 1440" keyTimes="0; 0.333; 0.5; 1" dur="24s"
+											repeatCount="indefinite" />
+										<circle cx="-6" cy="0" r="4" fill="#43e97b" />
+										<circle cx="6" cy="0" r="4" fill="#38f9d7" />
+									</g>
+								</g>
+								<circle cx="0" cy="0" r="4" fill="#38f9d7" opacity="0">
+									<animateMotion path="M 180,150 Q 250,50 350,-20" dur="24s"
+										keyTimes="0; 0.5; 0.625; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.499; 0.5; 0.624; 0.625; 1" dur="24s" repeatCount="indefinite" />
+								</circle>
+								<circle cx="0" cy="0" r="4" fill="#43e97b" opacity="0">
+									<animateMotion path="M 180,150 A 110 40 0 1 0 400 150 A 110 40 0 1 0 180 150"
+										dur="3s" repeatCount="indefinite" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.499; 0.5; 0.95; 0.98; 1" dur="24s" repeatCount="indefinite" />
+								</circle>
+							</g>
+						</svg>
+						<p style="font-size: 0.65em; color: #888; text-align: center; margin-top: 5px;">
+							Animation of continuous injection
+						</p>
+					</div>
+				</div>
+
 			</section>
+
+
 
 
 
@@ -495,7 +623,7 @@
 
 			<section>
 				<h2>Binary remnants versus observations</h2>
-				<img src="figures/bin_disrupt_start_og.svg" width="1600" align="left">
+				<img src="figures/bin_disrupt_start_simple.svg" width="1600" align="left">
 			</section>
 
 
@@ -528,17 +656,18 @@
 			<section>
 				<h2>Need relaxation to reproduce eccentricities</h2>
 				<div class=container align="left">
-					<div class="col">
+					<!-- <div class="col">
 						<figure class=figb4 align="left">
 							<img src=figures/nr_vis.png>
 							<figcaption>Non-resonant relaxation</figcaption>
 						</figure>
-					</div>
+					</div> -->
 
 					<div class="col">
 						<figure class=figb>
-							<img src=figures/rr_vis_red3.png>
-							<figcaption>Resonant relaxation: Rauch&Tremaine 1996, Perets et al 2009, Merritt et al 2011,
+							<img src=figures/rr_vis_red3.png height="800">
+							<figcaption>Resonant relaxation: Rauch&Tremaine 1996, Perets et al 2009<br /> Merritt et al
+								2011,
 								Antonini&Merritt 2013, Bar-Or&Fouvry 2018</figcaption>
 						</figure>
 					</div>
@@ -594,13 +723,17 @@
 
 			<section>
 				<h2>Small black holes (theory)</h2>
-				<div class=col>
-					<ul>
-						<li>$\sim 10^3$ BHs in central 0.1 pc
-						<li>Mass segregation <text class=cite>(e.g. Morris 1993)</text> or In-situ
+				<div class=container align="left">
+					<div class=col aligh="left">
+						<ul>
+							<li>$\sim 10^3$ BHs in central 0.1 pc</li>
+							<li>Mass segregation <text class=cite>(e.g. Morris 1993)</text> or In-situ</li>
 							<text class=cite><text style="font-weight:bold;">Generozov</text> et al 2018</text>
-						<li>$N_{\rm bh}(r)=9.4\times 10^2 \left(\frac{r}{0.1 {\rm pc}}\right)$
-					</ul>
+							<!-- <li>$N_{\rm bh}(r)=9.4\times 10^2 \left(\frac{r}{0.1 {\rm pc}}\right)$ </li>-->
+							<li>$r^{-2}$ density profile; 960 BHs inside 0.1 pc</li>
+						</ul>
+						<img src="figures/profile_basic.svg" />
+					</div>
 				</div>
 			</section>
 
@@ -635,10 +768,20 @@
 				<h2>Results: evolution</h2>
 				<div style="text-align:left">
 					<video align="left" width="1600" muted controls>
-						<source data-src="figures/za_vis_new.webm" type="video/webm" />
+						<source data-src="figures/za_vis_fgcu.webm" type="video/webm" />
 					</video>
 				</div>
 			</section>
+
+
+			<!-- <section>
+				<h2>Results: evolution</h2>
+				<div style="text-align:left">
+					<video align="left" width="1600" muted controls>
+						<source data-src="figures/tmp.webm" type="video/webm" />
+					</video>
+				</div>
+			</section> -->
 
 
 			<section>
@@ -652,7 +795,7 @@
 					</div>
 				</div>
 			</section>
-
+			<!-- 
 			<section>
 				<h2>Observational comparison: Bright and faint</h2>
 				<div style="text-align:left">
@@ -672,7 +815,7 @@
 				<div style="text-align:left">
 					<img src="figures/sma_compare_bf_rr2_ulgwa_lcnew.svg" width="1900" align="left">
 				</div>
-			</section>
+			</section> -->
 
 			<!-- <section>
 					<h2>Observational comparison: 2D</h2>
@@ -689,10 +832,15 @@
 				</section> -->
 
 			<section>
-				<h2>Main problem: Age distribution</h2>
+				<h2>Main problem: age distribution</h2>
 				<div style="text-align:left">
 					<img src="figures/habibi_age_plot2.svg" width="height=1000" align="left">
 				</div>
+			</section>
+
+			<section>
+				<h2>TO DO: The story so far</h2>
+
 			</section>
 
 
@@ -748,7 +896,7 @@
 			</section>
 
 			<section>
-				<h2>Disc formation: Molecular cloud disruption</h2>
+				<h2>Disc formation: Gas cloud disruption</h2>
 				<div class=container>
 					<img src=figures/gnm21_vis_a.png />
 					<ul>
@@ -928,12 +1076,30 @@
 			</section>
 
 			<section>
-				<h2>Aside: student projects on eccentric disc dynamics </h2>
+				<h2>Eccentric disks: not just the Galactic Center!</h2>
+				<!-- <ul>Disruptions of stars->TDEs  -->
 				<ul>
-					<li>Foote et al 2020: Effect of mass spectrum</li>
-					<li>Rodriguez et 2021: Effect of external perturber</li>
-					<!-- <li>Steep BH cusp may suppress instability</li> -->
+					<li>Tidal disruptions of stars: Foote+2020 </li>
+					<figure class="figb4">
+						<img src=figures/tde_schematic.jpg height="250" />
+						<img src=figures/Foote_Hayden_portrait.jpeg height="250" />
+
+						<figcaption><text class=cite>Credit: NASA/CXC/M.Weiss</text></figcaption>
+					</figure>
+					<li>Galaxy mergers: Rodriguez+2021</li>
+					<figure class="figb4">
+						<img src=figures/NGC4676.jpeg height="250" />
+						<img src=figures/arod_portrait.jpg height="250" />
+
+						<figcaption><text class=cite>Credit:NASA, H. Ford...</text></figcaption>
+					</figure>
+
+
 				</ul>
+
+
+
+
 			</section>
 
 
@@ -971,7 +1137,7 @@
 				<h2>Towards direct detection of the 'dark cusp'</h2>
 
 				<ul>
-					<li>In collaboration with: M.S. Bordoni and R. Capuzzo-Dolcetta </li>
+					<li>In collaboration with: Graduate student M.S. Bordoni </li>
 				</ul>
 			</section>
 
@@ -1020,8 +1186,10 @@
 
 					<div class="col" style="position:relative; left:40px;">
 						<ul>
-							<li> Residuals from Schwarzschild Orbit </li>
-							<li> Can be larger than astrometric accuracy!</li>
+							<li> Fit unperturbed orbit to S2 in simulation </li>
+							<li> Compute difference between positions and fit (residual)</li>
+							<li> Many realizations</li>
+							<li class="fragment"> Perturbation can be larger than astrometric accuracy!</li>
 							<!-- <li>10 μas: Angular size of a quarter on the moon.</li> -->
 						</ul>
 					</div>
@@ -1047,8 +1215,13 @@
 							</video>
 						</figure>
 						<figcaption>
+							<!-- <i class="fa-solid fa-video-slash"></i> -->
 							<text class="cite">Animation credit: Felix Mang</text>
 						</figcaption>
+					</div>
+					<div class="col">
+						<!-- <i class="fa-solid fa-video-slash"></i> -->
+						<img width="200" src="figures/no_pics.jpg" />
 					</div>
 				</div>
 			</section>
