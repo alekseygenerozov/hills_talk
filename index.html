@@ -31,6 +31,14 @@
 			text-align: left;
 		}
 
+		.reveal .slide-number {
+			font-size: 27px;
+			/* Adjust this number to make it as big as you need */
+			/* Optional: You might also want to adjust the background or padding so the larger text fits nicely */
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 8px;
+		}
+
 		.reveal section img {
 			background: none;
 			border: none;
@@ -158,6 +166,19 @@
 			flex: 1;
 		}
 
+
+		.col-lion {
+			flex: 3.2;
+		}
+
+		.col-mouse {
+			flex: 0.8;
+			/* Takes up 1 part (25%) of the width */
+			text-align: left;
+			/* font-size: 0.8em; */
+			/* Optional: slightly scales down annotation text */
+		}
+
 		.containerImage {
 			position: relative;
 		}
@@ -221,6 +242,40 @@
 			font-size: 150% !important;
 			text-align: left;
 		}
+
+		.media-container {
+			position: relative;
+			/* Acts as the anchor for the absolute text */
+			width: 1600;
+			margin: 0 auto;
+		}
+
+		.media-container-exact {
+			position: relative;
+			display: inline-block;
+			/* Shrink-wraps tightly to the 1600px video */
+			text-align: left;
+		}
+
+		.overlay-annotation {
+			position: absolute;
+			top: 30px;
+			right: 350px;
+			background-color: #222;
+			/* Solid dark gray/black */
+			color: #ffffff;
+			padding: 15px 25px;
+			border-radius: 8px;
+			font-size: 0.8em;
+			text-align: left;
+			z-index: 10;
+			pointer-events: none;
+		}
+
+		.overlay-annotation ul {
+			margin: 0;
+			padding-left: 20px;
+		}
 	</style>
 </head>
 
@@ -233,7 +288,7 @@
 		<!-- ====================== BETWEEN REVEAL AND SLIDES ====================== -->
 		<div class="slides">
 			<section>
-				<h1>Young Stars in the Galactic Center as Laboratories for Gravity and Astrophysics</h1>
+				<h1> Young Stars in the Galactic Center as Probes of Gravity and Astrophysics</h1>
 				<h2>Aleksey Generozov</h2>
 				<!-- <h3>Technion - Israel Institute of Technology</h3> -->
 				<!-- <img align="left" src="figures/logo1.png" />
@@ -246,10 +301,15 @@
 
 			<section>
 				<h2>Journey to the Galactic Center</h2>
-				<iframe width="1600" height="945" align="left"
-					data-src="https://www.youtube-nocookie.com/embed/DRCD-zx5QFA?si=CbFjD1zdu-a8IObv"
+				<!-- <iframe width="1600" height="945" align="left"
+					data-src="https://www.youtube-nocookie.com/embed/DRCD-zx5QFA?si=CbFjD1zdu-a8IObv&rel=0"
 					title="YouTube video player" frameborder="0"
-					referrerpolicy='strict-origin-when-cross-origin'></iframe>
+					referrerpolicy='strict-origin-when-cross-origin'></iframe> -->
+				<div class=container align="left">
+					<video width=1700 height=100% muted controls>
+						<source data-src="figures/eso1835c.mp4" type="video/mp4" />
+					</video>
+				</div>
 
 
 
@@ -266,10 +326,18 @@
 		
 				</section> -->
 
-
-
 			<section>
-				<h2>The Galactic Center is a natural lab</h2>
+				<h2>Focus</h2>
+				<ul>
+					<li>Part I: Explaining the central stars</li>
+					<li>Part II: Central stars as probes</li>
+				</ul>
+			</section>
+
+
+			<!-- (TO DO: VIS OF GR PRECESSION?) -->
+			<section>
+				<h2>Central stars as probes</h2>
 				<ul>
 					<!-- <li class=fragment> Constrain uncertain populations, and accretion physics, etc. -->
 				</ul>
@@ -373,19 +441,17 @@
 			</section>
 
 			<section>
-				<h2> Key questions</h2>
+				<h2>Part I: Explaining the stars</h2>
 				<ul>
-					<li>How do we explain the paradox of youth?</li>
-					<li>What can the close stars tell up about the immediate vicinity of
-						the SMBH?
-					</li>
+					<li class="fragment">Paradox of youth</li>
+					<li class="fragment">Orbits</li>
 				</ul>
 			</section>
 
 
 
 			<section>
-				<h2>Binary disruptions can solve the paradox</h2>
+				<h2>Binary disruptions: Solution to paradox?</h2>
 				<div class=container>
 					<iframe width="1120" height="630" src="https://www.youtube.com/embed/Gtie6QD-3CY?rel=0"
 						title="YouTube video player" frameborder="0"
@@ -417,14 +483,52 @@
 				</div>
 			</section>
 
-			<section>
+			<!-- <section>
 				<h2>Binary disruptions produce eccentric bound orbits</h2>
 				<div style="text-align:left">
 					<video align="left" width="1600" muted controls>
 						<source data-src="figures/example_disruption_new.webm" type="video/webm" />
 					</video>
 				</div>
+			</section> -->
+
+
+			<section>
+				<h2>Binary disruptions produce eccentric bound orbits</h2>
+
+				<div class="media-container" align="left">
+					<video style="width: 82.5%;" muted controls>
+						<source data-src="figures/example_disruption_new.webm" type="video/webm" />
+					</video>
+
+					<div class="overlay-annotation">
+						<ul>
+							<li>au=$1.5\times 10^{11}$ m</li>
+							<li>SMBH=Supermassive<br />black hole (Sgr A*)</li>
+						</ul>
+					</div>
+				</div>
 			</section>
+
+
+
+			<!-- <section>
+				<h2>Binary disruptions produce eccentric bound orbits</h2>
+				<div class=container>
+					<div class=col-lion>
+						<div style="text-align:left">
+							<video align="left" width="1600" muted controls>
+								<source data-src="figures/example_disruption_new.webm" type="video/webm" />
+							</video>
+						</div>
+					</div>
+					<div class=col-mouse>
+						<ul>
+							<li>au=$1.5\times 10^{11}$ m</li>
+						</ul>
+					</div>
+				</div>
+			</section> -->
 
 			<section>
 				<h2>Binary disruptions produce eccentric bound orbits</h2>
@@ -459,8 +563,9 @@
 
 
 
-			<section>
-				<h2>Can we reproduce the S-stars with continuously disrupting binaries?</h2>
+			<!-- (TO DO: REMOVE THE LOOP) -->
+			<!-- <section>
+				<h2>Can we reproduce the close stars with continuously disrupting binaries? </h2>
 				<div style="display: flex; align-items: center; justify-content: space-between;">
 
 					<div style="width: 45%; text-align: left; font-size: 0.9em;">
@@ -583,6 +688,135 @@
 					</div>
 				</div>
 
+			</section> -->
+
+			<section>
+				<h2>Can we reproduce the close stars with continuously disrupting binaries?</h2>
+
+				<div style="display: flex; align-items: center; justify-content: space-between;">
+
+					<div style="width: 45%; text-align: left; font-size: 0.9em;">
+						<ul>
+							<li><text class="cite">Generozov et al 2025</text> (with MPE group...)</li>
+							<li class="fragment">Uniform close approach</li>
+							<li class="fragment">Observationally motivated binary population <text class=cite>(Moe and
+									Di
+									Stefano 2017)</text></li>
+							<li class=fragment> Many 3-body simulations (Fewbody; <text class=cite>Fregeau 2004</text>)
+							</li>
+
+						</ul>
+					</div>
+
+					<div style="width: 50%;">
+						<svg viewBox="0 0 400 300"
+							style="background: #0b1120; border-radius: 10px; border: 1px solid #333;">
+
+							<circle cx="200" cy="150" r="20" fill="none" stroke="rgba(255,255,255,0.4)"
+								stroke-dasharray="4 4" />
+							<circle cx="200" cy="150" r="90" fill="none" stroke="rgba(255,255,255,0.05)" />
+
+							<circle cx="200" cy="150" r="6" fill="black" stroke="#ff8c00" stroke-width="2"
+								style="filter: drop-shadow(0 0 8px #ff8c00);" />
+
+							<g transform="rotate(0 200 150)">
+								<g>
+									<animateMotion path="M 20,50 Q 100,100 180,150" dur="24s" keyTimes="0; 0.166; 1"
+										keyPoints="0; 1; 1" calcMode="linear" repeatCount="1" fill="freeze" />
+									<animate attributeName="opacity" values="1; 1; 0; 0" keyTimes="0; 0.166; 0.167; 1"
+										dur="24s" repeatCount="1" fill="freeze" />
+									<g>
+										<animateTransform attributeName="transform" type="rotate" values="0; 1440; 1440"
+											keyTimes="0; 0.166; 1" dur="24s" repeatCount="1" fill="freeze" />
+										<circle cx="-6" cy="0" r="4" fill="#4facfe" />
+										<circle cx="6" cy="0" r="4" fill="#f093fb" />
+									</g>
+								</g>
+								<circle cx="0" cy="0" r="4" fill="#4facfe" opacity="0">
+									<animateMotion path="M 180,150 Q 250,50 350,-20" dur="24s"
+										keyTimes="0; 0.166; 0.29; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="1" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.165; 0.166; 0.289; 0.29; 1" dur="24s" repeatCount="1"
+										fill="freeze" />
+								</circle>
+								<circle cx="0" cy="0" r="4" fill="#f093fb" opacity="0">
+									<animateMotion path="M 180,150 A 90 35 0 1 0 360 150 A 90 35 0 1 0 180 150" dur="4s"
+										repeatCount="6" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.165; 0.166; 1"
+										dur="24s" repeatCount="1" fill="freeze" />
+								</circle>
+							</g>
+
+							<g transform="rotate(120 200 150)">
+								<g>
+									<animateMotion path="M -20,100 Q 80,130 180,150" dur="24s"
+										keyTimes="0; 0.166; 0.333; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="1" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.165; 0.166; 0.333; 0.334; 1" dur="24s" repeatCount="1"
+										fill="freeze" />
+									<g>
+										<animateTransform attributeName="transform" type="rotate"
+											values="0; 0; 1440; 1440" keyTimes="0; 0.166; 0.333; 1" dur="24s"
+											repeatCount="1" fill="freeze" />
+										<circle cx="-6" cy="0" r="4" fill="#00f2fe" />
+										<circle cx="6" cy="0" r="4" fill="#ff0844" />
+									</g>
+								</g>
+								<circle cx="0" cy="0" r="4" fill="#00f2fe" opacity="0">
+									<animateMotion path="M 180,150 Q 230,220 350,280" dur="24s"
+										keyTimes="0; 0.333; 0.458; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="1" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.332; 0.333; 0.457; 0.458; 1" dur="24s" repeatCount="1"
+										fill="freeze" />
+								</circle>
+								<circle cx="0" cy="0" r="4" fill="#ff0844" opacity="0">
+									<animateMotion path="M 180,150 A 65 20 0 1 0 310 150 A 65 20 0 1 0 180 150" dur="2s"
+										repeatCount="12" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.332; 0.333; 1"
+										dur="24s" repeatCount="1" fill="freeze" />
+								</circle>
+							</g>
+
+							<g transform="rotate(-110 200 150)">
+								<g>
+									<animateMotion path="M -50,180 Q 80,160 180,150" dur="24s"
+										keyTimes="0; 0.333; 0.5; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="1" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.332; 0.333; 0.5; 0.501; 1" dur="24s" repeatCount="1"
+										fill="freeze" />
+									<g>
+										<animateTransform attributeName="transform" type="rotate"
+											values="0; 0; 1440; 1440" keyTimes="0; 0.333; 0.5; 1" dur="24s"
+											repeatCount="1" fill="freeze" />
+										<circle cx="-6" cy="0" r="4" fill="#43e97b" />
+										<circle cx="6" cy="0" r="4" fill="#38f9d7" />
+									</g>
+								</g>
+								<circle cx="0" cy="0" r="4" fill="#38f9d7" opacity="0">
+									<animateMotion path="M 180,150 Q 250,50 350,-20" dur="24s"
+										keyTimes="0; 0.5; 0.625; 1" keyPoints="0; 0; 1; 1" calcMode="linear"
+										repeatCount="1" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1; 0; 0"
+										keyTimes="0; 0.499; 0.5; 0.624; 0.625; 1" dur="24s" repeatCount="1"
+										fill="freeze" />
+								</circle>
+								<circle cx="0" cy="0" r="4" fill="#43e97b" opacity="0">
+									<animateMotion path="M 180,150 A 110 40 0 1 0 400 150 A 110 40 0 1 0 180 150"
+										dur="3s" repeatCount="8" fill="freeze" />
+									<animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.499; 0.5; 1"
+										dur="24s" repeatCount="1" fill="freeze" />
+								</circle>
+							</g>
+						</svg>
+						<p style="font-size: 0.65em; color: #888; text-align: center; margin-top: 5px;">
+							Sequential Hills mechanism depositing stars onto highly eccentric orbits.
+						</p>
+					</div>
+				</div>
 			</section>
 
 
@@ -666,9 +900,10 @@
 					<div class="col">
 						<figure class=figb>
 							<img src=figures/rr_vis_red3.png height="800">
-							<figcaption>Resonant relaxation: Rauch&Tremaine 1996, Perets et al 2009<br /> Merritt et al
+							<figcaption><text class="cite">Resonant relaxation: Rauch&Tremaine 1996</text></figcaption>
+							<!-- <figcaption>Resonant relaxation: Rauch&Tremaine 1996, Perets et al 2009<br /> Merritt et al
 								2011,
-								Antonini&Merritt 2013, Bar-Or&Fouvry 2018</figcaption>
+								Antonini&Merritt 2013, Bar-Or&Fouvry 2018</figcaption> -->
 						</figure>
 					</div>
 
@@ -732,7 +967,7 @@
 							<!-- <li>$N_{\rm bh}(r)=9.4\times 10^2 \left(\frac{r}{0.1 {\rm pc}}\right)$ </li>-->
 							<li>$r^{-2}$ density profile; 960 BHs inside 0.1 pc</li>
 						</ul>
-						<img src="figures/profile_basic.svg" />
+						<img src="figures/profile_basic.svg" height="500" />
 					</div>
 				</div>
 			</section>
@@ -839,7 +1074,15 @@
 			</section>
 
 			<section>
-				<h2>TO DO: The story so far</h2>
+				<h2>The story so far</h2>
+				<ul>
+					<li>Binaries continuously disrupted</li>
+					<li>Explain central stars?</li>
+					<ul>
+						<li class="fragment">[x] Orbits</li>
+						<li class="fragment">[] Paradox of youth</li>
+					</ul>
+				</ul>
 
 			</section>
 
@@ -896,7 +1139,7 @@
 			</section>
 
 			<section>
-				<h2>Disc formation: Gas cloud disruption</h2>
+				<h2>Disk formation: Gas cloud disruption</h2>
 				<div class=container>
 					<img src=figures/gnm21_vis_a.png />
 					<ul>
@@ -931,27 +1174,11 @@
 				<ul>
 					<li class=fragment>Hydrodynamic simulations
 						<!-- <text class=cite>Springel 2005</text> -->
-					<li class=fragment>400K particles
-					<li class=fragment>Cooling/Star formation (sink particles)
+						<!-- <li class=fragment>400K particles -->
+					<li class=fragment>Star formation (sink particles)
 				</ul>
 			</section>
 
-			<section>
-				<h2>Simulation setup: Background density</h2>
-
-				<div class=container>
-					<div class=col>
-						<img src="figures/prec_schematic_new.png" width="1000" align="left">
-					</div>
-					<div class=col style="position:relative; left:40px;">
-						<ul>
-							<li class=fragment>Controls precession!
-							<li class=fragment>Assume fixed $r^{-1.16}$ density <text class=cite>(Schodel+2018)</text>
-							<li class=fragment>$1.2\times 10^6 M_{\odot}$ --stellar mass inside central pc.
-						</ul>
-					</div>
-				</div>
-			</section>
 
 
 			<section>
@@ -1052,28 +1279,24 @@
 			</section>
 
 
-			<section>
-				<h2>Disruptions: Angular distribution </h2>
-				<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
-			</section>
-
-			<section data-transition="none">
-				<h2>Hypervelocity star implications <text class=cite>(<text style="font-weight:bold;">Generozov</text>
-						2020)</text>
-				</h2>
-				<img src="figures/hvs_stream_contour_corr_no_leg.svg" width="1800" align="left">
-			</section>
-
-
 
 			<section>
-				<h2>Difficult to explain all S-stars with disc </h2>
+				<h2>Difficult to explain all S-stars with disk</h2>
 				<ul>
-					<li>Eccentricity distributions of S-stars (Need more massive BHs)</li>
-					<li>Masses of S-Stars (Generozov 2021)</li>
+					<li>Eccentricity distributions of central stars</li>
+					<!-- <li>Masses of S-Stars (Generozov 2021)</li> -->
 					<!-- <li>Steep BH cusp may suppress instability</li> -->
+					<li>Explain central stars?</li>
+					<ul>
+						<li class="fragment">[] Orbits</li>
+						<li class="fragment">[x] Paradox of youth</li>
+					</ul>
+					<li class="fragment">Future: combined model</li>
+
 				</ul>
 			</section>
+
+
 
 			<section>
 				<h2>Eccentric disks: not just the Galactic Center!</h2>
@@ -1081,32 +1304,47 @@
 				<ul>
 					<li>Tidal disruptions of stars: Foote+2020 </li>
 					<figure class="figb4">
-						<img src=figures/tde_schematic.jpg height="250" />
-						<img src=figures/Foote_Hayden_portrait.jpeg height="250" />
+						<img src=figures/tde_schematic.jpg height="500" />
+						<img src=figures/Foote_Hayden_portrait.jpeg height="500" />
 
 						<figcaption><text class=cite>Credit: NASA/CXC/M.Weiss</text></figcaption>
 					</figure>
-					<li>Galaxy mergers: Rodriguez+2021</li>
+					<!-- <li>Galaxy mergers: Rodriguez+2021</li>
 					<figure class="figb4">
 						<img src=figures/NGC4676.jpeg height="250" />
 						<img src=figures/arod_portrait.jpg height="250" />
 
 						<figcaption><text class=cite>Credit:NASA, H. Ford...</text></figcaption>
-					</figure>
-
-
+					</figure> -->
 				</ul>
+			</section>
 
+			<section>
+				<h2>Eccentric disks: not just the Galactic Center!</h2>
+				<!-- <ul>Disruptions of stars->TDEs  -->
+				<ul>
+					<!-- <li>Tidal disruptions of stars: Foote+2020 </li> -->
+					<!-- <figure class="figb4">
+						<img src=figures/tde_schematic.jpg height="250" />
+						<img src=figures/Foote_Hayden_portrait.jpeg height="250" />
 
+						<figcaption><text class=cite>Credit: NASA/CXC/M.Weiss</text></figcaption>
+					</figure> -->
+					<li>What would happen in a merger: Rodriguez+2021</li>
+					<figure class="figb4">
+						<img src=figures/NGC4676.jpeg height="500" />
+						<img src=figures/arod_portrait.jpg height="500" />
 
-
+						<figcaption><text class=cite>Credit:NASA, H. Ford...</text></figcaption>
+					</figure>
+				</ul>
 			</section>
 
 
 
 
 			<!-- <section>
-				<h2>Towards direct detection of the 'dark cusp'</h2>
+				<h2>Towards direct detection of small BHs</h2>
 				<div class="container">
 
 					<img src="figures/s2_trajectory_animation.gif" height="900">
@@ -1120,7 +1358,7 @@
 			</section> -->
 
 			<!-- <section>
-				<h2>Towards direct detection of the 'dark cusp'</h2>
+				<h2>Towards direct detection of small BHs</h2>
 				<div class="container">
 
 					<img src="figures/out_plane_matteo.png" height="900">
@@ -1134,16 +1372,20 @@
 			</section> -->
 
 			<section>
-				<h2>Towards direct detection of the 'dark cusp'</h2>
+				<h2>Part II: Central stars as probes</h2>
+			</section>
+
+			<section>
+				<h2>Towards direct detection of small BHs</h2>
 
 				<ul>
-					<li>In collaboration with: Graduate student M.S. Bordoni </li>
+					<li>Project led by MPE graduate student M.S. Bordoni </li>
 				</ul>
 			</section>
 
 
 			<section>
-				<h2>Towards direct detection of the 'dark cusp'</h2>
+				<h2>Towards direct detection of small BHs</h2>
 
 				<div class="container" align="left">
 					<div class="col">
@@ -1163,8 +1405,9 @@
 			</section>
 
 
+
 			<section>
-				<h2>Towards direct detection of the 'dark cusp'</h2>
+				<h2>Towards direct detection of small BHs</h2>
 				<div class="container">
 
 					<img src="figures/s2_trajectory_animation.gif" height="900">
@@ -1179,7 +1422,7 @@
 			</section>
 
 			<section>
-				<h2>Towards direct detection of the 'dark cusp'</h2>
+				<h2>Towards direct detection of small BHs</h2>
 				<div class="container">
 
 					<img src="figures/yres_violin_plot_t2026.35.svg" height="900">
@@ -1196,12 +1439,20 @@
 				</div>
 			</section>
 
+
 			<section>
 				<h2>Implications:</h2>
 				<ul>
-					<li class="fragment">Have to understand perturbations for spin measurements.</li>
-					<li class="fragment">Preview for LISA (2032-2034).</li>
-					<img class="fragment" src="figures/emri.png" height="700" />
+					<li class="fragment">Have to understand perturbations for future measurements of SMBH gravity (spin)
+					</li>
+					<div class="fragment">
+						<li>Small black holes: interest for missions like LISA (2035).
+						</li>
+						<figure class="figb4">
+							<img src="figures/LISA-waves.jpg" height="700" />
+							<figcaption>Image credit: NASA</figcaption>
+						</figure>
+					</div>
 				</ul>
 			</section>
 
@@ -1241,12 +1492,13 @@
 
 
 			<section>
+				<!-- TO DO: Make summary consistent with the current outline! -->
 				<h2>Summary</h2>
 				<ul>
-					<li class="fragment">Binary disruptions can reproduce orbital distributions of young stars in
+					<li class="fragment">Binary disruptions explain young stars in
 						Galactic Center</li>
-					<li class="fragment">Tensions remain (e.g. ages)</li>
-					<li class="fragment">S-stars can be a probe for the population of stellar mass black holes in
+					<li class="fragment">Hard to explain orbits and ages simultaneously</li>
+					<li class="fragment">Central stars can be a probe for the population of stellar mass black holes in
 						the
 						Galactic Center</li>
 				</ul>
@@ -1259,12 +1511,19 @@
 			<section>
 				<h2>Disruptions of higher multiples</h2>
 				<div class=container>
-					<figure class=figb3 align="left">
-						<img align="left" height="800" src="figures/MultFrac.png">
-						<figcaption>
-							<text class="cite">Offner et al 2022</text>
-						</figcaption>
-					</figure>
+					<div class="col">
+						<figure class=figb3 align="left">
+							<img align="left" height="800" src="figures/MultFrac.png">
+							<figcaption>
+								<text class="cite">Offner et al 2022</text>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col">
+						<ul>
+							<li>Students would simulate disruptions of triple+ stars by an SMBH</li>
+						</ul>
+					</div>
 					<!-- <div class=col style="position:relative; left:40px;">
 						<img src="figures_sf/mults2.png" width="800" align="left">
 					</div> -->
@@ -1312,8 +1571,40 @@
 
 			<section>
 				<h2>Summary of vision</h2>
-				<img src="figures/vision_summary_jazzy.png" height="800" />
+				<img src="figures/vision_summary_jazzyb.png" height="800" />
 			</section>
+
+
+			<section>
+				<h2>Simulation setup: Background density</h2>
+
+				<div class=container>
+					<div class=col>
+						<img src="figures/prec_schematic_new.png" width="1000" align="left">
+					</div>
+					<div class=col style="position:relative; left:40px;">
+						<ul>
+							<li class=fragment>Controls precession!
+							<li class=fragment>Assume fixed $r^{-1.16}$ density <text class=cite>(Schodel+2018)</text>
+							<li class=fragment>$1.2\times 10^6 M_{\odot}$ --stellar mass inside central pc.
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>Disruptions: Angular distribution </h2>
+				<img align="left" width="1800" src="figures/aitoff_1_hres.svg">
+			</section>
+
+			<section data-transition="none">
+				<h2>Hypervelocity star implications <text class=cite>(<text style="font-weight:bold;">Generozov</text>
+						2020)</text>
+				</h2>
+				<img src="figures/hvs_stream_contour_corr_no_leg.svg" width="1800" align="left">
+			</section>
+
+
 
 
 
@@ -1573,7 +1864,7 @@
 					<ul>
 						<li class=fragment> Experimented with steeper density in N-body
 						<li class=fragment> Similar number of disruption?!
-						<li class=fragment> Disc starts with a strong primordial 'twist'
+						<li class=fragment> Disk starts with a strong primordial 'twist'
 					</ul>
 				</section>
 
